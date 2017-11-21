@@ -1,13 +1,14 @@
 //
-//  CustomTextField.swift
+//  CustomButtonUpdateStatus.swift
 //  iOSTranning112017
 //
-//  Created by nguyen.phuc.khanh on 11/13/17.
+//  Created by nguyen.phuc.khanh on 11/21/17.
 //  Copyright © 2017 nguyen.phuc.khanh. All rights reserved.
 //
 
 import UIKit
-@IBDesignable class CustomTextField: UITextField {
+
+@IBDesignable class CustomButtonUpdateStatus: UIView {
     @IBInspectable var cornerRadius: CGFloat = 0.0 {
         didSet {
             self.layer.cornerRadius  = cornerRadius
@@ -21,14 +22,6 @@ import UIKit
     @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet {
             self.layer.borderColor = borderColor.cgColor
-        }
-    }
-    @IBInspectable var placeHolderColor: UIColor? {
-        get {
-            return self.placeHolderColor
-        }
-        set {
-            self.attributedPlaceholder = NSAttributedString(string: self.placeholder != nil ? self.placeholder!: "", attributes: [NSAttributedStringKey.foregroundColor: newValue!])
         }
     }
 }
