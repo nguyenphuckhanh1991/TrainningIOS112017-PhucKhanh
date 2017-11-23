@@ -8,12 +8,13 @@
 
 import UIKit
 
-class TimelineTableViewController: UITableViewController, TimeLineTableViewCellDelegate {
+class TimelineTableViewController: UITableViewController {
+    let cellItem = [StatusCellItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
         let cellStatusTimelineNib = UINib(nibName: "TimeLineTableViewCell", bundle: nil)
         self.tableView.register(cellStatusTimelineNib, forCellReuseIdentifier: "TimeLineTableViewCell")
-        self.tableView.estimatedRowHeight = 415
+        self.tableView.estimatedRowHeight = 50
         let firstCellTimelineNib = UINib(nibName: "FirstTimelineTableViewCell", bundle: nil)
         self.tableView.register(firstCellTimelineNib, forCellReuseIdentifier: "FirstTimelineTableViewCell")
         self.tableView.estimatedRowHeight = 194
@@ -44,6 +45,7 @@ class TimelineTableViewController: UITableViewController, TimeLineTableViewCellD
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "FirstTimelineTableViewCell", for: indexPath) as? FirstTimelineTableViewCell {
+                cell.delegatePostVC = self
                 return cell
             }
         } else {
@@ -52,10 +54,13 @@ class TimelineTableViewController: UITableViewController, TimeLineTableViewCellD
                 return cell
             }
         }
-         return UITableViewCell()
+        return UITableViewCell()
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+}
+extension TimelineTableViewController: TimeLineTableViewCellDelegate, FirstTimelineTableViewCellDelegate {
+    func presentPostStatus() {
+        let postStatusVC = UIStoryboard.init(name: "Timeline", bundle: nil).instantiateViewController(withIdentifier: "PostViewController")
+        navigationController?.present(postStatusVC, animated: true, completion: nil)
     }
     func commentPush() {
         let timeLineCommentVC = UIStoryboard.init(name: "Timeline", bundle: nil).instantiateViewController(withIdentifier: "TimelineCommentTableViewController")

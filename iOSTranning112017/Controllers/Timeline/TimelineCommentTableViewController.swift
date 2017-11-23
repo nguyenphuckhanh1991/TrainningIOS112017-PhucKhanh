@@ -21,7 +21,7 @@ class TimelineCommentTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 70
         let firstCommentTableViewCellNib = UINib(nibName: "FirstCommentTableViewCell", bundle: nil)
         self.tableView.register(firstCommentTableViewCellNib, forCellReuseIdentifier: "FirstCommentTableViewCell")
-        self.tableView.estimatedRowHeight = 492
+        self.tableView.estimatedRowHeight = 483
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
