@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import IQKeyboardManagerSwift
 
 class LogInViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak private var emailInputTextField: UITextField!
@@ -19,15 +18,19 @@ class LogInViewController: BaseViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureKeyboard()
         tranparentNavigation = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard(_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
     @IBAction func logInAction(_ sender: Any) {
         checkUserAuth()
     }
+    @objc func dismissKeyBoard(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
     func checkUserAuth() {
         if emailInputTextField.text!.count > 6 && passwordInputTextField.text!.count > 6 {
-            guard let tabbar = storyboard?.instantiateViewController(withIdentifier: "BaseTabbar") as? BaseTabbarController else {
+            guard let tabbar = UIStoryboard.init(name: "Timeline", bundle: nil).instantiateViewController(withIdentifier: "BaseTabbarController") as? BaseTabbarController else {
                 return
             }
             present(tabbar, animated: true, completion: nil)
@@ -37,10 +40,5 @@ class LogInViewController: BaseViewController, UITextFieldDelegate {
             alertController.addAction(alertAction)
             present(alertController, animated: true, completion: nil)
         }
-    }
-    func configureKeyboard() {
-        IQKeyboardManager.sharedManager().enable = true
-        IQKeyboardManager.sharedManager().enableAutoToolbar = false
-        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
     }
 }

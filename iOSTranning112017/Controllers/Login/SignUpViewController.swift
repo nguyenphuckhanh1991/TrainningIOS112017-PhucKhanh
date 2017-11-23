@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import IQKeyboardManagerSwift
 
 class SignUpViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
@@ -15,12 +14,6 @@ class SignUpViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureKeyboard()
         tranparentNavigation = true
-    }
-    func configureKeyboard() {
-        IQKeyboardManager.sharedManager().enable = true
-        IQKeyboardManager.sharedManager().enableAutoToolbar = false
-        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
     }
 }
