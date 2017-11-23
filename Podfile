@@ -16,5 +16,5 @@ target 'iOSTranning112017' do
     inherit! :search_paths
     # Pods for testing
   end
-
 end
+

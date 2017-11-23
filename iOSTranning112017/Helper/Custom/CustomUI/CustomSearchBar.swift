@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable class CustomSearchBar: UISearchBar {
-    @IBInspectable var borderColor: UIColor = UIColor.clear {
-        didSet {
-            self.layer.borderColor = borderColor.cgColor
-        }
+  @IBInspectable var borderColor: UIColor = UIColor.clear {
+    didSet {
+      self.layer.borderColor = borderColor.cgColor
     }
-    @IBInspectable var borderWidth: CGFloat = 1 {
-        didSet {
-            self.layer.borderWidth = borderWidth
-        }
+  }
+  @IBInspectable var borderWidth: CGFloat = 1 {
+    didSet {
+      self.layer.borderWidth = borderWidth
     }
+  }
 }

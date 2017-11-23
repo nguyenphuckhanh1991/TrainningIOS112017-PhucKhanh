@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "listFriend.png",
+      "filename" : "icons8-edit_user.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "listFriend@2x.png",
+      "filename" : "icons8-edit_user-2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "listFriend@3x.png",
+      "filename" : "icons8-edit_user-1.png",
       "scale" : "3x"
     }
   ],

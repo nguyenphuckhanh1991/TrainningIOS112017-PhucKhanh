@@ -8,38 +8,38 @@
 
 import UIKit
 protocol FirstTimelineTableViewCellDelegate: class {
-    func presentPostStatus()
+  func presentPostStatus()
 }
 class FirstTimelineTableViewCell: UITableViewCell {
-    weak var delegatePostVC: FirstTimelineTableViewCellDelegate?
-    @IBOutlet weak private var listFriendImageView: UIImageView!
-    @IBOutlet weak private var searchBar: UISearchBar!
-    @IBOutlet weak private var postStatusImageView: UIImageView!
-    @IBOutlet weak private var cameraImageView: UIImageView!
-    @IBOutlet weak private var locationImageView: UIImageView!
-    @IBOutlet weak private var postStatusLabel: UILabel!
-    @IBOutlet weak private var photoLabel: UILabel!
-    @IBOutlet weak private var locationLabel: UILabel!
-    @IBOutlet weak private var avaImageView: UIImageView!
-    @IBOutlet weak private var textView: UITextView!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setDefaultTextView()
-    }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
-    @IBAction func postStatusTapped(_ sender: UIButton) {
-        delegatePostVC?.presentPostStatus()
-    }
+  weak var delegatePostVC: FirstTimelineTableViewCellDelegate?
+  @IBOutlet weak private var listFriendImageView: UIImageView!
+  @IBOutlet weak private var searchBar: UISearchBar!
+  @IBOutlet weak private var postStatusImageView: UIImageView!
+  @IBOutlet weak private var cameraImageView: UIImageView!
+  @IBOutlet weak private var locationImageView: UIImageView!
+  @IBOutlet weak private var postStatusLabel: UILabel!
+  @IBOutlet weak private var photoLabel: UILabel!
+  @IBOutlet weak private var locationLabel: UILabel!
+  @IBOutlet weak private var avaImageView: UIImageView!
+  @IBOutlet weak private var textView: UITextView!
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    setDefaultTextView()
+  }
+  @IBAction func statusTextFieldTapped(_ sender: UIButton) {
+     delegatePostVC?.presentPostStatus()
+  }
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    // Configure the view for the selected state
+  }
 }
 extension FirstTimelineTableViewCell: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        self.textView.text = ""
-        self.textView.textColor = UIColor.black
-    }
-    func setDefaultTextView() {
-        self.textView.delegate = self
-    }
+  func textViewDidBeginEditing(_ textView: UITextView) {
+    self.textView.text = ""
+    self.textView.textColor = UIColor.black
+  }
+  func setDefaultTextView() {
+    self.textView.delegate = self
+  }
 }

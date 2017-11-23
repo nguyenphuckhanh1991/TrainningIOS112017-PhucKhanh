@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="471"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bKJ-E0-ftd" id="ugU-OU-0RD">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="470.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="470.66666666666669"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covierImage" translatesAutoresizingMaskIntoConstraints="NO" id="Uuw-JW-Z11">
@@ -67,6 +67,9 @@
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naomi Kyle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1b-Ig-dpl">
                         <rect key="frame" x="144" y="215" width="86" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Hgm-1x-iKg"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -104,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-i7-AQg">
-                                <rect key="frame" x="107" y="28" width="68.5" height="16"/>
+                                <rect key="frame" x="107" y="28" width="68.666666666666686" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Drc-z3-QIw"/>
                                 </constraints>
@@ -120,7 +123,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity Log" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wJ-rA-xEc">
-                                <rect key="frame" x="198" y="28" width="74.5" height="16"/>
+                                <rect key="frame" x="198" y="28" width="74.666666666666686" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="dOC-hf-g4X"/>
                                 </constraints>
@@ -137,14 +140,14 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="ZbL-M1-EoA">
-                                <rect key="frame" x="318.5" y="8" width="20" height="20"/>
+                                <rect key="frame" x="318.66666666666669" y="8" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="73s-uy-f6j"/>
                                     <constraint firstAttribute="height" constant="20" id="ypB-L6-XOi"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsI-KV-UBn">
-                                <rect key="frame" x="312.5" y="28" width="33" height="16"/>
+                                <rect key="frame" x="312.66666666666669" y="28" width="33" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Pfs-Ar-gHP"/>
                                 </constraints>
@@ -434,14 +437,14 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ava_naomi_kyle" width="200" height="200"/>
+        <image name="ava_naomi_kyle" width="66" height="66"/>
         <image name="camera" width="16" height="14"/>
-        <image name="covierImage" width="647" height="250"/>
-        <image name="edit_profile" width="25" height="25"/>
+        <image name="covierImage" width="431" height="166"/>
+        <image name="edit_profile" width="16" height="16"/>
         <image name="ic-calendar" width="16" height="16"/>
         <image name="ic-gmail" width="16" height="16"/>
         <image name="ic-phone" width="16" height="16"/>
-        <image name="ic_acivityLog" width="24" height="24"/>
+        <image name="ic_acivityLog" width="16" height="16"/>
         <image name="more" width="16" height="16"/>
         <image name="post_stt" width="20" height="18"/>
     </resources>
