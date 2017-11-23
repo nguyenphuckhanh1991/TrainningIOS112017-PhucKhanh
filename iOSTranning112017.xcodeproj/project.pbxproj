@@ -29,6 +29,7 @@
 		A8C50F3A1FC7F47800F3E9EB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C50F391FC7F47800F3E9EB /* Extension.swift */; };
 		A8C50F3C1FC7F50000F3E9EB /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C50F3B1FC7F50000F3E9EB /* UIViewController.swift */; };
 		A8C50F3E1FC7F7FB00F3E9EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C50F3D1FC7F7FB00F3E9EB /* User.swift */; };
+		A8D91F961FD4F162002A153D /* TimelineCommentContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D91F951FD4F162002A153D /* TimelineCommentContainerView.swift */; };
 		A8DA8A631FCCFC8F000F18D8 /* CustomButtonUpdateStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA8A5E1FCCFC8E000F18D8 /* CustomButtonUpdateStatus.swift */; };
 		A8DA8A641FCCFC8F000F18D8 /* CustomLabelAddPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA8A5F1FCCFC8E000F18D8 /* CustomLabelAddPhoto.swift */; };
 		A8DA8A651FCCFC8F000F18D8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA8A601FCCFC8E000F18D8 /* CustomTextField.swift */; };
@@ -72,6 +73,7 @@
 		A8C50F391FC7F47800F3E9EB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		A8C50F3B1FC7F50000F3E9EB /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A8C50F3D1FC7F7FB00F3E9EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A8D91F951FD4F162002A153D /* TimelineCommentContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCommentContainerView.swift; sourceTree = "<group>"; };
 		A8DA8A5E1FCCFC8E000F18D8 /* CustomButtonUpdateStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonUpdateStatus.swift; sourceTree = "<group>"; };
 		A8DA8A5F1FCCFC8E000F18D8 /* CustomLabelAddPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabelAddPhoto.swift; sourceTree = "<group>"; };
 		A8DA8A601FCCFC8E000F18D8 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		A85021A01FC58FE300156030 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
+				A8D91F951FD4F162002A153D /* TimelineCommentContainerView.swift */,
 				B7CE16591FBD82EF0096DD38 /* TimelineTableViewController.swift */,
 				B76B527E1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift */,
 				B75CE9311FC3C899005176A0 /* PostViewController.swift */,
@@ -501,6 +504,7 @@
 				A8C50F3E1FC7F7FB00F3E9EB /* User.swift in Sources */,
 				A8C50F2F1FC6D59C00F3E9EB /* ProfileTableViewController.swift in Sources */,
 				A8DA8A661FCCFC8F000F18D8 /* CustomButton.swift in Sources */,
+				A8D91F961FD4F162002A153D /* TimelineCommentContainerView.swift in Sources */,
 				A8C50F3C1FC7F50000F3E9EB /* UIViewController.swift in Sources */,
 				A88CD0131FCD0FEC00BC93AE /* FirstProfileCell.swift in Sources */,
 				A88CD00F1FCD0F7500BC93AE /* CustomCommentCell.swift in Sources */,
