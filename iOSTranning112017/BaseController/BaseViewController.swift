@@ -11,7 +11,6 @@ import UIKit
 class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,6 +27,7 @@ class BaseViewController: UIViewController {
     }
     fileprivate func setTransparentForNavigation() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     fileprivate func defaulTranparentNavigation () {
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: UIBarMetrics.default)

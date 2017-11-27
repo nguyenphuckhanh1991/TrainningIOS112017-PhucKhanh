@@ -20,7 +20,6 @@ class StatusCellItem: NSObject {
     var like: String?
     var comment: String?
     var share: String?
-    
     required init(avaImage: UIImage, contentStateImage: UIImage, likeImage: UIImage, commentImage: UIImage, shareImage: UIImage, status: String, name: String, date: String, likeCount: String, like: String, comment: String, share: String) {
         self.avaImage = avaImage
         self.contentStateImage = contentStateImage
