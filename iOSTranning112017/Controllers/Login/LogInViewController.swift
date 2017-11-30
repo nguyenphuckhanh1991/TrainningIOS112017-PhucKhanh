@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogInViewController: BaseViewController, UITextFieldDelegate {
+class LogInViewController: BaseViewController {
     @IBOutlet weak private var emailInputTextField: UITextField!
     @IBOutlet weak private var passwordInputTextField: UITextField!
     @IBAction func signUpAction(_ sender: Any) {
@@ -18,14 +18,15 @@ class LogInViewController: BaseViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        tranparentNavigation = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyBoard(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
         self.view.addGestureRecognizer(tapGesture)
+        dismissKeyboard(tapGesture)
+        tranparentNavigation = true
     }
     @IBAction func logInAction(_ sender: Any) {
         checkUserAuth()
     }
-    @objc func dismissKeyBoard(_ sender: UITapGestureRecognizer) {
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     func checkUserAuth() {
@@ -38,7 +39,19 @@ class LogInViewController: BaseViewController, UITextFieldDelegate {
             let alertController = UIAlertController(title: "Error", message: "Email and Password need more than 6 characters", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "Try Again", style: .default, handler: nil)
             alertController.addAction(alertAction)
-            present(alertController, animated: true, completion: nil)
+            let tabbar = UIStoryboard.init(name: "Timeline", bundle: nil).instantiateInitialViewController()
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = tabbar
         }
+    }
+}
+extension LogInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailInputTextField {
+            passwordInputTextField.becomeFirstResponder()
+        } else {
+            view.endEditing(true)
+        }
+        return false
     }
 }
