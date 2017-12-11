@@ -8,6 +8,7 @@
 
 import UIKit
 protocol FirstTimelineTableViewCellDelegate: class {
+    func logOut()
     func presentPostStatus()
 }
 class FirstTimelineTableViewCell: UITableViewCell {
@@ -22,16 +23,19 @@ class FirstTimelineTableViewCell: UITableViewCell {
     @IBOutlet weak private var locationLabel: UILabel!
     @IBOutlet weak private var avaImageView: UIImageView!
     @IBOutlet weak private var textView: UITextView!
+    @IBAction func logoutButton(_ sender: UIButton) {
+        delegatePostVC?.logOut()
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         setDefaultTextView()
     }
+    @IBAction func statusTextFieldTapped(_ sender: UIButton) {
+        delegatePostVC?.presentPostStatus()
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
-    }
-    @IBAction func postStatusTapped(_ sender: UIButton) {
-        delegatePostVC?.presentPostStatus()
     }
 }
 extension FirstTimelineTableViewCell: UITextViewDelegate {
