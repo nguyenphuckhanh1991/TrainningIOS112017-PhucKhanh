@@ -12,6 +12,12 @@ protocol EditProfileTableViewControllerDelegate: class {
 }
 class EditProfileTableViewController: UITableViewController {
   weak var delegate: EditProfileTableViewControllerDelegate?
+  var userInfo = User()
+  let dateFormater: DateFormatter = {
+    let formater = DateFormatter.init()
+    formater.dateFormat = "dd/MM/yyyy"
+    return formater
+  }()
   @IBOutlet private weak var avaImageView: UIImageView!
   @IBOutlet private weak var userNameInput: UITextField!
   @IBOutlet private weak var emailInput: UITextField!
@@ -25,6 +31,9 @@ class EditProfileTableViewController: UITableViewController {
   }
   override func viewDidLoad() {
     super.viewDidLoad()
+    let data = UserDefaults.standard.value(forKey: "user") as? Data
+    userInfo = (NSKeyedUnarchiver.unarchiveObject(with: data!) as? User)!
+    fillData(user: userInfo)
     navigationController?.delegate = self
   }
   @IBAction func editAvaImage(_ sender: UIButton) {
@@ -32,13 +41,10 @@ class EditProfileTableViewController: UITableViewController {
     identifier = "AvatarImage"
   }
   @IBAction func saveInfo(_ sender: Any) {
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "MM/dd/yyyy"
-    let date = Date()
-    birthDayInput.text = dateFormatter.string(from: date)
     let user = User(avatarImage: avaImageView.image, userName: userNameInput.text, emailAddress: emailInput.text, phoneNumber: phoneNumberEdit.text, dateOfBirth: birthDayInput.text)
     let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
     UserDefaults.standard.set(encodedData, forKey: "user")
+    UserDefaults.standard.synchronize()
     delegate?.saveProfile(user: user)
     navigationController?.popViewController(animated: true)
   }
@@ -81,8 +87,14 @@ class EditProfileTableViewController: UITableViewController {
     datePickerView.addTarget(self, action: #selector(datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
   }
   @objc func datePickerValueChanged(sender: UIDatePicker) {
-    let dateFormatter = DateFormatter()
-    birthDayInput.text = dateFormatter.string(from: sender.date)
+    birthDayInput.text = dateFormater.string(from: sender.date)
+  }
+  func fillData(user: User) {
+    avaImageView.image = user.avatarImage
+    userNameInput.text = user.userName
+    emailInput.text = user.emailAddress
+    phoneNumberEdit.text = user.phoneNumber
+    birthDayInput.text = user.dateOfBirth
   }
   // MARK: - Table view data source
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -107,4 +119,3 @@ extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINav
     dismiss(animated: true, completion: nil)
   }
 }
-
