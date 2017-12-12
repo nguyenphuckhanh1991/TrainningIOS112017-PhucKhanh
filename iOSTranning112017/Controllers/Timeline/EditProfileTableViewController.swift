@@ -31,7 +31,7 @@ class EditProfileTableViewController: UITableViewController {
   }
   override func viewDidLoad() {
     super.viewDidLoad()
-    let data = UserDefaults.standard.value(forKey: "user") as? Data
+    let data = UserDefaults.standard.value(forKey: AppKey.UserDefaultKey.user) as? Data
     userInfo = (NSKeyedUnarchiver.unarchiveObject(with: data!) as? User)!
     fillData(user: userInfo)
     navigationController?.delegate = self
@@ -43,7 +43,7 @@ class EditProfileTableViewController: UITableViewController {
   @IBAction func saveInfo(_ sender: Any) {
     let user = User(avatarImage: avaImageView.image, userName: userNameInput.text, emailAddress: emailInput.text, phoneNumber: phoneNumberEdit.text, dateOfBirth: birthDayInput.text)
     let encodedData = NSKeyedArchiver.archivedData(withRootObject: user)
-    UserDefaults.standard.set(encodedData, forKey: "user")
+    UserDefaults.standard.set(encodedData, forKey: AppKey.UserDefaultKey.user)
     UserDefaults.standard.synchronize()
     delegate?.saveProfile(user: user)
     navigationController?.popViewController(animated: true)
@@ -51,13 +51,13 @@ class EditProfileTableViewController: UITableViewController {
   // Image picker
   func showActionSheet(title: String, message: String) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-    alert.addAction(UIAlertAction.init(title: "Pick photo", style: .default, handler: {_ in
+    alert.addAction(UIAlertAction.init(title: InputResult.ActionSheet.pickPhoto, style: .default, handler: {_ in
       self.pickPhoto()
     }))
-    alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: {_ in
+    alert.addAction(UIAlertAction(title: InputResult.ActionSheet.takePhoto, style: .default, handler: {_ in
       self.takePhoto()
     }))
-    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) -> Void in
+    alert.addAction(UIAlertAction(title: InputResult.ActionSheet.cancel, style: .cancel, handler: { (_) -> Void in
       alert.dismiss(animated: true, completion: nil)
     }))
     present(alert, animated: true, completion: nil)

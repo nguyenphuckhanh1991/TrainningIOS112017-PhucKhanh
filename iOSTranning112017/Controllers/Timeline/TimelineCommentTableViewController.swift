@@ -11,11 +11,11 @@ import UIKit
 class TimelineCommentTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    let customCommentCellNib = UINib(nibName: "CustomCommentCell", bundle: nil)
-    self.tableView.register(customCommentCellNib, forCellReuseIdentifier: "CustomCommentCell")
+    let customCommentCellNib = UINib(nibName: Storyboard.CustomCell.CustomCommentCell, bundle: nil)
+    self.tableView.register(customCommentCellNib, forCellReuseIdentifier: Storyboard.CustomCell.CustomCommentCell)
     self.tableView.estimatedRowHeight = 70
-    let firstCommentTableViewCellNib = UINib(nibName: "FirstCommentTableViewCell", bundle: nil)
-    self.tableView.register(firstCommentTableViewCellNib, forCellReuseIdentifier: "FirstCommentTableViewCell")
+    let firstCommentTableViewCellNib = UINib(nibName: Storyboard.CustomCell.FirstCommentTableViewCell, bundle: nil)
+    self.tableView.register(firstCommentTableViewCellNib, forCellReuseIdentifier: Storyboard.CustomCell.FirstCommentTableViewCell)
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -29,11 +29,11 @@ class TimelineCommentTableViewController: UITableViewController {
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.row == 0 {
-      if let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCommentTableViewCell", for: indexPath) as? FirstCommentTableViewCell {
+      if let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.CustomCell.FirstCommentTableViewCell, for: indexPath) as? FirstCommentTableViewCell {
         return cell
       }
     } else {
-      if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath) as? CustomCommentCell {
+      if let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.CustomCell.CustomCommentCell, for: indexPath) as? CustomCommentCell {
         return cell
       }
     }

@@ -28,7 +28,7 @@ class TimelineCommentContainerView: BaseViewController {
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
-    if segue.identifier == "TimelineCommentContainerView" {
+    if segue.identifier == Storyboard.Timeline.TimelineTableViewController {
       timelineCommentVC = segue.destination as? TimelineCommentTableViewController
   }
 }
