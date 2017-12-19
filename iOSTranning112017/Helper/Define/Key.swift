@@ -13,6 +13,18 @@ struct AppKey {
         static let password                 = "password"
         static let email                    = "email"
     }
+    struct Chatroom {
+        static let chatrooms                = "chatrooms"
+        static let pagination               = "pagination"
+        static let page                     = "page"
+        static let pagesize                 = "page_size"
+        static let total                    = "total"
+        static let totalpages               = "total_pages"
+        static let lastindex                = "last_index"
+        static let username                 = "name"
+        static let description              = "description"
+        static let avatarUrl                = "avatarUrl"
+    }
     struct HeaderKey {
         static let ContentType              = "Content-Type"
         static let Authorization            = "Authorization"

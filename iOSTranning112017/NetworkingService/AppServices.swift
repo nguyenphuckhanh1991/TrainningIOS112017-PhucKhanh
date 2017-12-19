@@ -7,16 +7,20 @@
 //
 
 import Foundation
-
+import UIKit
 enum APIType {
     case login
     case logout
     case register
+    case timeline
+    case fetchAvaImage
 }
 enum httpMethod: String {
     case post = "POST"
     case get = "GET"
 }
+let imageCache = NSCache<NSString, UIImage>()
+
 struct AppServices {
     private static let baseURL = "https://thl.herokuapp.com/api/v1"
     private let session: URLSession = {
@@ -33,6 +37,12 @@ struct AppServices {
             pathParam = "/users"
         case .logout:
             pathParam = "/logout"
+        case .timeline:
+            pathParam = "/chatroom?page=\(parameter![AppKey.Chatroom.page] ?? 0)&page_size=\(parameter![AppKey.Chatroom.pagesize] ?? 10)"
+        case .fetchAvaImage:
+            if let avatarUrl = parameter![AppKey.Chatroom.avatarUrl] as? String {
+                pathParam = avatarUrl
+            }
         }
         return pathParam
     }
@@ -60,7 +70,7 @@ struct AppServices {
                     request.setValue(tokenString, forHTTPHeaderField: AppKey.HeaderKey.Authorization)
                 }
             }
-            if parameter != nil {
+            if parameter != nil && httpMethod == .post {
                 do {
                     let jsonData = try JSONSerialization.data(withJSONObject: parameter!, options: .prettyPrinted)
                     request.httpBody = jsonData
@@ -82,6 +92,21 @@ struct AppServices {
                 completion(nil, error)
             }
         })
+        dataTask?.resume()
+    }
+    mutating func requestImage(httpMethod: httpMethod, parameter: [String: Any]?, apiType: APIType, completion: @escaping (AnyObject?, Error?) -> Void) {
+        let urlString = getPath(API: apiType, parameter: parameter)
+        guard let url = URL(string: urlString) else {return}
+        var request = URLRequest.init(url: url)
+        request.httpMethod = httpMethod.rawValue
+        dataTask = session.dataTask(with: request) { (data, _, error) in
+            if let jsonData = data {
+                print(jsonData)
+                completion(jsonData as AnyObject, error)
+            } else {
+                completion(nil, error)
+            }
+        }
         dataTask?.resume()
     }
 }

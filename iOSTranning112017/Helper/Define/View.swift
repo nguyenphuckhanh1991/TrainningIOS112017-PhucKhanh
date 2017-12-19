@@ -32,6 +32,7 @@ struct Storyboard {
         static let FirstTimelineTableViewCell           = "FirstTimelineTableViewCell"
         static let CustomCommentCell                    = "CustomCommentCell"
         static let TimeLineTableViewCell                = "TimeLineTableViewCell"
+        static let ChatroomCell                         = "ChatroomCell"
     }
     struct Notification {
         static let postStatus                           = "postStatus"
