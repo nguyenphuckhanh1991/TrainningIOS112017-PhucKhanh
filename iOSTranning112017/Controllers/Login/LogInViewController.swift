@@ -12,6 +12,8 @@ class LogInViewController: BaseViewController {
     @IBOutlet weak private var emailInputTextField: UITextField!
     @IBOutlet weak private var passwordInputTextField: UITextField!
     @IBOutlet weak private var loginButton: CustomButton!
+    @IBAction func signUpAction(_ sender: Any) {
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }

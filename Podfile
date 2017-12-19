@@ -6,6 +6,6 @@ target 'iOSTranning112017' do
   use_frameworks!
    inhibit_all_warnings!
   # Pods for iOSTranning112017
-	pod 'IQKeyboardManagerSwift', '~> 5.0'
+	pod 'IQKeyboardManagerSwift'
 end
 

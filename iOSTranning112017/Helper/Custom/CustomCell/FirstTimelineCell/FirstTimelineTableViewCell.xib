@@ -48,10 +48,13 @@
                                     <constraint firstAttribute="width" constant="20" id="pm6-rl-cXN"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u87-Jd-3iK">
-                                <rect key="frame" x="338" y="5" width="37" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jml-G0-pcv">
+                                <rect key="frame" x="338" y="13" width="37" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gcR-bi-Xe6"/>
+                                </constraints>
                                 <connections>
-                                    <action selector="logoutButton:" destination="kXf-Na-7PI" eventType="touchUpInside" id="2aX-X0-4gz"/>
+                                    <action selector="logoutButton:" destination="kXf-Na-7PI" eventType="touchUpInside" id="biy-lZ-eT8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,8 +66,10 @@
                             <constraint firstAttribute="bottom" secondItem="u87-Jd-3iK" secondAttribute="bottom" constant="5" id="QqY-1P-IhF"/>
                             <constraint firstAttribute="trailing" secondItem="u87-Jd-3iK" secondAttribute="trailing" id="Tk9-JR-ViV"/>
                             <constraint firstItem="zJC-c9-yXf" firstAttribute="leading" secondItem="YdE-8C-VEd" secondAttribute="trailing" constant="5" id="YnL-Xc-iW5"/>
+                            <constraint firstAttribute="trailing" secondItem="Jml-G0-pcv" secondAttribute="trailing" id="cIy-Mg-2Gq"/>
+                            <constraint firstItem="Jml-G0-pcv" firstAttribute="leading" secondItem="YdE-8C-VEd" secondAttribute="trailing" id="cls-PH-f86"/>
                             <constraint firstItem="YdE-8C-VEd" firstAttribute="leading" secondItem="KWP-ps-dhx" secondAttribute="leading" id="gAh-86-fjY"/>
-                            <constraint firstItem="u87-Jd-3iK" firstAttribute="top" secondItem="KWP-ps-dhx" secondAttribute="top" constant="5" id="ioV-OX-geB"/>
+                            <constraint firstItem="Jml-G0-pcv" firstAttribute="top" secondItem="KWP-ps-dhx" secondAttribute="top" constant="13" id="qlF-JA-hbp"/>
                             <constraint firstAttribute="bottom" secondItem="YdE-8C-VEd" secondAttribute="bottom" id="vrG-rv-1lL"/>
                             <constraint firstItem="zJC-c9-yXf" firstAttribute="centerY" secondItem="YdE-8C-VEd" secondAttribute="centerY" id="yFd-LT-JaB"/>
                         </constraints>

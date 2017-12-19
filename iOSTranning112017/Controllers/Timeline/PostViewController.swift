@@ -23,13 +23,13 @@ class PostViewController: UIViewController {
   @IBOutlet weak private var cotentStateImageView: UIImageView!
   @IBAction func chooseImage(_ sender: UIButton) {
     let alert = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
-    alert.addAction(UIAlertAction.init(title: "Pick photo", style: .default, handler: {_ in
+    alert.addAction(UIAlertAction.init(title: InputResult.ActionSheet.pickPhoto, style: .default, handler: {_ in
       self.pickPhoto()
     }))
-    alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: {_ in
+    alert.addAction(UIAlertAction(title: InputResult.ActionSheet.takePhoto, style: .default, handler: {_ in
       self.takePhoto()
     }))
-    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) -> Void in
+    alert.addAction(UIAlertAction(title: InputResult.ActionSheet.cancel, style: .cancel, handler: { (_) -> Void in
       alert.dismiss(animated: true, completion: nil)
     }))
     present(alert, animated: true, completion: nil)
