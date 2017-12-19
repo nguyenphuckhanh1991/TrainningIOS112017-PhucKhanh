@@ -12,6 +12,11 @@ class LogInViewController: BaseViewController {
     @IBOutlet weak private var emailInputTextField: UITextField!
     @IBOutlet weak private var passwordInputTextField: UITextField!
     @IBOutlet weak private var loginButton: CustomButton!
+<<<<<<< HEAD
+=======
+    @IBAction func signUpAction(_ sender: Any) {
+    }
+>>>>>>> fetch-chatroom-to-timeline
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }

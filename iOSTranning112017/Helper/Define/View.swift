@@ -2,11 +2,13 @@
 //  View.swift
 //  iOSTranning112017
 //
-//  Created by nguyen.phuc.khanh on 12/13/17.
+
+//  Created by Joy on 12/21/17.
 //  Copyright © 2017 nguyen.phuc.khanh. All rights reserved.
 //
 
 import Foundation
+
 struct Storyboard {
     struct Main {
         static let login                                = "Login"
@@ -32,6 +34,7 @@ struct Storyboard {
         static let FirstTimelineTableViewCell           = "FirstTimelineTableViewCell"
         static let CustomCommentCell                    = "CustomCommentCell"
         static let TimeLineTableViewCell                = "TimeLineTableViewCell"
+        static let ChatroomCell                         = "ChatroomCell"
     }
     struct Notification {
         static let postStatus                           = "postStatus"

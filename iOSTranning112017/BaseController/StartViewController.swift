@@ -27,7 +27,7 @@ class StartViewController: BaseViewController {
         }
     }
     func isLogged() -> Bool {
-        guard UserDefaults.standard.value(forKey: "token") != nil else {
+        guard UserDefaults.standard.value(forKey: AppKey.TokenKey.token) != nil else {
             return false
         }
         return true

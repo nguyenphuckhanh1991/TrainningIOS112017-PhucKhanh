@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DeJ-eg-ZrM">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="woV-nB-F9t">
+>>>>>>> fetch-chatroom-to-timeline
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -210,7 +214,11 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="emailInputTextField" destination="IX6-mZ-iAI" id="vjv-CM-9Dj"/>
+<<<<<<< HEAD
                         <outlet property="loginButton" destination="3l8-d6-Yt6" id="Jp9-au-iSK"/>
+=======
+                        <outlet property="loginButton" destination="3l8-d6-Yt6" id="2AH-Gd-dBw"/>
+>>>>>>> fetch-chatroom-to-timeline
                         <outlet property="passwordInputTextField" destination="M8Y-cZ-anC" id="Ehb-bX-wRo"/>
                     </connections>
                 </viewController>
@@ -288,7 +296,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+<<<<<<< HEAD
                                             <action selector="doSignUpAction:" destination="9ib-wn-q30" eventType="touchUpInside" id="2jU-3g-dC0"/>
+=======
+                                            <action selector="doSignUpAction:" destination="9ib-wn-q30" eventType="touchUpInside" id="N2U-wi-pG4"/>
+>>>>>>> fetch-chatroom-to-timeline
                                         </connections>
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="82" translatesAutoresizingMaskIntoConstraints="NO" id="gXy-xf-7LG" customClass="CustomLabelAddPhoto" customModule="iOSTranning112017" customModuleProvider="target">
@@ -461,7 +473,11 @@
                         <outlet property="emailInput" destination="HNT-F0-7wN" id="Fms-hU-Btl"/>
                         <outlet property="passWordInput" destination="j8a-0F-xrN" id="smd-eR-fc9"/>
                         <outlet property="phoneNumberInput" destination="bjw-yN-S41" id="ZBf-Ij-2fb"/>
+<<<<<<< HEAD
                         <outlet property="signUpButton" destination="myV-sC-HYD" id="hcO-Fw-XHN"/>
+=======
+                        <outlet property="signUpButton" destination="myV-sC-HYD" id="oms-Jq-K3F"/>
+>>>>>>> fetch-chatroom-to-timeline
                         <outlet property="userNameInput" destination="Bhu-up-z6g" id="mdj-I7-HR1"/>
                     </connections>
                 </viewController>
@@ -475,6 +491,7 @@
             <point key="canvasLocation" x="1581.1594202898552" y="138.58695652173915"/>
         </scene>
         <!--Start View Controller-->
+<<<<<<< HEAD
         <scene sceneID="gvH-LG-ooS">
             <objects>
                 <viewController id="DeJ-eg-ZrM" customClass="StartViewController" customModule="iOSTranning112017" customModuleProvider="target" sceneMemberID="viewController">
@@ -483,11 +500,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-ax-L2x">
+=======
+        <scene sceneID="L5f-19-cFu">
+            <objects>
+                <viewController id="woV-nB-F9t" customClass="StartViewController" customModule="iOSTranning112017" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iu0-cB-TCI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="nmM-Ug-VaU">
+>>>>>>> fetch-chatroom-to-timeline
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+<<<<<<< HEAD
                             <constraint firstItem="8xO-WS-hia" firstAttribute="trailing" secondItem="Tyy-ax-L2x" secondAttribute="trailing" id="Acq-I7-RAH"/>
                             <constraint firstItem="Tyy-ax-L2x" firstAttribute="top" secondItem="8xO-WS-hia" secondAttribute="top" id="UT8-ja-GyA"/>
                             <constraint firstItem="Tyy-ax-L2x" firstAttribute="leading" secondItem="8xO-WS-hia" secondAttribute="leading" id="i99-nh-XLA"/>
@@ -499,6 +527,19 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gI-Lt-VYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-840" y="138"/>
+=======
+                            <constraint firstItem="wgA-5w-Uf4" firstAttribute="trailing" secondItem="nmM-Ug-VaU" secondAttribute="trailing" id="0G5-Ot-4tG"/>
+                            <constraint firstItem="nmM-Ug-VaU" firstAttribute="leading" secondItem="wgA-5w-Uf4" secondAttribute="leading" id="UmF-CT-iZ5"/>
+                            <constraint firstItem="wgA-5w-Uf4" firstAttribute="bottom" secondItem="nmM-Ug-VaU" secondAttribute="bottom" id="qNy-0o-4iN"/>
+                            <constraint firstItem="nmM-Ug-VaU" firstAttribute="top" secondItem="wgA-5w-Uf4" secondAttribute="top" id="w0T-87-gm3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wgA-5w-Uf4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xd3-YS-qUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-863" y="142"/>
+>>>>>>> fetch-chatroom-to-timeline
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="edk-xM-SBJ">
