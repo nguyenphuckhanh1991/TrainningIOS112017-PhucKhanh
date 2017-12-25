@@ -9,7 +9,7 @@
 import UIKit
 protocol FirstTimelineTableViewCellDelegate: class {
     func logOut()
-    func presentPostStatus()
+    func presentPostChatroom()
 }
 class FirstTimelineTableViewCell: UITableViewCell {
     weak var delegatePostVC: FirstTimelineTableViewCellDelegate?
@@ -31,7 +31,7 @@ class FirstTimelineTableViewCell: UITableViewCell {
         setDefaultTextView()
     }
     @IBAction func statusTextFieldTapped(_ sender: UIButton) {
-        delegatePostVC?.presentPostStatus()
+        delegatePostVC?.presentPostChatroom()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

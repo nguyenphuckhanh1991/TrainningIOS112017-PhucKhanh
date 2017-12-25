@@ -11,22 +11,23 @@
 //struct Post {
 //    var nameLabel: String?
 //    var descriptionLabel: String?
-//    var avaImageURl: String
+//    var avaImageURl: String?
 //    var userPost: User?
 //    init(json:[String: Any]) {
 //        self.nameLabel = json[AppKey.UserPostKey.userName] as? String
 //        self.descriptionLabel = json[AppKey.UserPostKey.description] as? String
-//        self.avaImageURl = json[AppKey.UserPostKey.avatarImage] as? String
-//        if let user = User(json: jsonData) {
+//        self.avaImageURl = json[AppKey.UserPostKey.avatarImageURL] as? String
+//        let jsonData = json[AppKey.UserPostKey.chatrooms] as? [String: Any]
+//        if let user = User(json: jsonData!) {
 //            self.userPost = user
 //        }
 //    }
-//    static func cratePost(data: [String: Any]?) -> [Post]? {
+//    static func createPost(data: [String: Any]?) -> [Post]? {
 //        guard let responseData = data else {
 //            return nil
 //        }
 //        var result: [Post] = []
-//        guard  let posts = [responseData] else {
+//        guard let posts = responseData else {
 //            return nil
 //        }
 //        for post in posts {
@@ -39,4 +40,3 @@
 //        return result
 //    }
 //}
-

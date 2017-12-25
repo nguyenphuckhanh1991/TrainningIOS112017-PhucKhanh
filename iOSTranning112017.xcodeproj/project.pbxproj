@@ -39,12 +39,11 @@
 		B73874831FF0A80A004024A7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73874821FF0A80A004024A7 /* Post.swift */; };
 		B73E24EE1FBC37C500F08566 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E24ED1FBC37C500F08566 /* BaseNavigationController.swift */; };
 		B73E24F01FBC380700F08566 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E24EF1FBC380700F08566 /* BaseTabbarController.swift */; };
-		B7428BC01FE76BC300EECF10 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7428BBF1FE76BC300EECF10 /* AppServices.swift */; };
+		B74084691FF1F4C7003354E5 /* CreateChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74084681FF1F4C7003354E5 /* CreateChatroomViewController.swift */; };
 		B75CE9321FC3C899005176A0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CE9311FC3C899005176A0 /* PostViewController.swift */; };
 		B75CE9391FC3E44D005176A0 /* StatusCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CE9381FC3E44D005176A0 /* StatusCellItem.swift */; };
 		B76B527F1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B527E1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift */; };
 		B77347E91FDFC4950080C885 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77347E81FDFC4950080C885 /* StartViewController.swift */; };
-		B7B71FC71FE12D7200170BBB /* InputResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B71FC61FE12D7200170BBB /* InputResult.swift */; };
 		B7CE165A1FBD82EF0096DD38 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE16591FBD82EF0096DD38 /* TimelineTableViewController.swift */; };
 		B7D9220A1FB9893F00F52637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D922091FB9893F00F52637 /* AppDelegate.swift */; };
 		B7D9223E1FB98B9200F52637 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9223D1FB98B9200F52637 /* LogInViewController.swift */; };
@@ -53,7 +52,6 @@
 		B7ED5AB61FECA1EE00946515 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB31FECA1EE00946515 /* AppKey.swift */; };
 		B7ED5ABA1FECA23200946515 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB81FECA23100946515 /* ImageCache.swift */; };
 		B7ED5ABB1FECA23200946515 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB91FECA23200946515 /* AppService.swift */; };
-		B7F746D31FE11F0500108B6A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F746D21FE11F0500108B6A /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +92,7 @@
 		B73874821FF0A80A004024A7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B73E24ED1FBC37C500F08566 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		B73E24EF1FBC380700F08566 /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		B74084681FF1F4C7003354E5 /* CreateChatroomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChatroomViewController.swift; sourceTree = "<group>"; };
 		B7428BBF1FE76BC300EECF10 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
 		B75CE9311FC3C899005176A0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B75CE9381FC3E44D005176A0 /* StatusCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCellItem.swift; sourceTree = "<group>"; };
@@ -178,6 +177,7 @@
 		A85021A01FC58FE300156030 /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
+				B74084681FF1F4C7003354E5 /* CreateChatroomViewController.swift */,
 				A8D91F951FD4F162002A153D /* TimelineCommentContainerView.swift */,
 				B7CE16591FBD82EF0096DD38 /* TimelineTableViewController.swift */,
 				B76B527E1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift */,
@@ -536,7 +536,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F746D31FE11F0500108B6A /* View.swift in Sources */,
 				A8C50F3E1FC7F7FB00F3E9EB /* User.swift in Sources */,
 				B7ED5ABA1FECA23200946515 /* ImageCache.swift in Sources */,
 				B7ED5AB51FECA1EE00946515 /* View.swift in Sources */,
@@ -558,20 +557,19 @@
 				A823122E1FBA740900193D97 /* SignUpViewController.swift in Sources */,
 				A8C50F321FC7B2DD00F3E9EB /* EditProfileTableViewController.swift in Sources */,
 				A88CD00C1FCD0F3200BC93AE /* FirstCommentTableViewCell.swift in Sources */,
-				B7B71FC71FE12D7200170BBB /* InputResult.swift in Sources */,
 				B73874831FF0A80A004024A7 /* Post.swift in Sources */,
 				A88CCFF71FCD08E500BC93AE /* FirstTimelineTableViewCell.swift in Sources */,
 				A8C50F341FC7C40700F3E9EB /* BaseViewController.swift in Sources */,
 				A8C50F3A1FC7F47800F3E9EB /* Extension.swift in Sources */,
 				A8DA8A641FCCFC8F000F18D8 /* CustomLabelAddPhoto.swift in Sources */,
 				B7ED5AB61FECA1EE00946515 /* AppKey.swift in Sources */,
+				B74084691FF1F4C7003354E5 /* CreateChatroomViewController.swift in Sources */,
 				B7D9223E1FB98B9200F52637 /* LogInViewController.swift in Sources */,
 				B76B527F1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift in Sources */,
 				B73E24EE1FBC37C500F08566 /* BaseNavigationController.swift in Sources */,
 				B7D9220A1FB9893F00F52637 /* AppDelegate.swift in Sources */,
 				B73E24F01FBC380700F08566 /* BaseTabbarController.swift in Sources */,
 				B7CE165A1FBD82EF0096DD38 /* TimelineTableViewController.swift in Sources */,
-				B7428BC01FE76BC300EECF10 /* AppServices.swift in Sources */,
 				B7ED5AB41FECA1EE00946515 /* InputResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

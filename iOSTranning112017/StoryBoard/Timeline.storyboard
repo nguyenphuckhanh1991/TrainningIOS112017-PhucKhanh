@@ -1099,10 +1099,155 @@
             </objects>
             <point key="canvasLocation" x="2939" y="856"/>
         </scene>
+        <!--Create Chatroom View Controller-->
+        <scene sceneID="gAx-0K-15h">
+            <objects>
+                <viewController storyboardIdentifier="CreateChatroomViewController" id="4K0-KC-xrJ" customClass="CreateChatroomViewController" customModule="iOSTranning112017" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MnX-Ws-efF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.55000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatroom_background" translatesAutoresizingMaskIntoConstraints="NO" id="IPR-jq-XGR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aT-kf-Z5P" customClass="CustomButton" customModule="iOSTranning112017" customModuleProvider="target">
+                                <rect key="frame" x="30" y="473" width="354" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.67843137249999996" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Create Chatroom">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createChatroom:" destination="4K0-KC-xrJ" eventType="touchUpInside" id="0W3-MZ-uwL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1i-JY-Ap6" customClass="CustomTextField" customModule="iOSTranning112017" customModuleProvider="target">
+                                <rect key="frame" x="30" y="286" width="354" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AvatarImage URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIY-tK-irc" customClass="CustomTextField" customModule="iOSTranning112017" customModuleProvider="target">
+                                <rect key="frame" x="30" y="378" width="354" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGk-dd-zoS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7an-Vs-kWc">
+                                        <rect key="frame" x="5" y="29" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="TXu-H0-jBt"/>
+                                            <constraint firstAttribute="height" constant="30" id="kr7-xV-p0s"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="4K0-KC-xrJ" eventType="touchUpInside" id="ppi-Ii-myc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Chatroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZG3-fb-LlN">
+                                        <rect key="frame" x="141" y="34" width="132" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97638851400000004" green="0.97652500870000003" blue="0.97634547949999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="7an-Vs-kWc" secondAttribute="bottom" constant="5" id="GLm-B0-FyD"/>
+                                    <constraint firstItem="7an-Vs-kWc" firstAttribute="leading" secondItem="kGk-dd-zoS" secondAttribute="leading" constant="5" id="cQp-1C-VLW"/>
+                                    <constraint firstAttribute="height" constant="64" id="jsN-qk-htx"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oSL-fo-cnU" customClass="CustomTextField" customModule="iOSTranning112017" customModuleProvider="target">
+                                <rect key="frame" x="30" y="191" width="354" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="23"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kGk-dd-zoS" firstAttribute="trailing" secondItem="oXM-cu-dNl" secondAttribute="trailing" id="54H-oQ-iDj"/>
+                            <constraint firstItem="IPR-jq-XGR" firstAttribute="leading" secondItem="oXM-cu-dNl" secondAttribute="leading" id="9JS-Ux-W8X"/>
+                            <constraint firstItem="kGk-dd-zoS" firstAttribute="top" secondItem="MnX-Ws-efF" secondAttribute="top" id="Kje-Fy-tbq"/>
+                            <constraint firstItem="IPR-jq-XGR" firstAttribute="trailing" secondItem="oXM-cu-dNl" secondAttribute="trailing" id="UCi-HI-gH0"/>
+                            <constraint firstItem="kGk-dd-zoS" firstAttribute="leading" secondItem="oXM-cu-dNl" secondAttribute="leading" id="VBQ-CY-eFs"/>
+                            <constraint firstItem="oXM-cu-dNl" firstAttribute="bottom" secondItem="IPR-jq-XGR" secondAttribute="bottom" id="biu-tA-BCi"/>
+                            <constraint firstItem="IPR-jq-XGR" firstAttribute="top" secondItem="MnX-Ws-efF" secondAttribute="top" id="wC0-Gw-SqG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oXM-cu-dNl"/>
+                    </view>
+                    <connections>
+                        <outlet property="avaImageURL" destination="zIY-tK-irc" id="uHf-3s-IhB"/>
+                        <outlet property="descriptionInput" destination="F1i-JY-Ap6" id="dQG-Kz-NIJ"/>
+                        <outlet property="userNameInput" destination="oSL-fo-cnU" id="guK-aW-ReP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEu-0x-aFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5088.4057971014499" y="877.98913043478262"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ava_naomi_kyle" width="66" height="66"/>
         <image name="camera" width="16" height="14"/>
+        <image name="chatroom_background" width="360" height="640"/>
         <image name="covierImage" width="431" height="166"/>
         <image name="downarrow_timeline" width="16" height="16"/>
         <image name="edit_profile" width="16" height="16"/>

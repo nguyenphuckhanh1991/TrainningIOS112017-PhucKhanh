@@ -6,10 +6,7 @@ target 'iOSTranning112017' do
   use_frameworks!
    inhibit_all_warnings!
   # Pods for iOSTranning112017
-<<<<<<< HEAD
-	pod 'IQKeyboardManagerSwift', '~> 5.0'
 =======
 	pod 'IQKeyboardManagerSwift'
->>>>>>> fetch-chatroom-to-timeline
 end
 

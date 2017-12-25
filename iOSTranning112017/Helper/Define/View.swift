@@ -21,6 +21,7 @@ struct Storyboard {
         static let PostViewController                   = "PostViewController"
         static let ProfileTableViewController           = "ProfileTableViewController"
         static let EditProfileTableViewController       = "EditProfileTableViewController"
+        static let CreateChatroomViewController         = "CreateChatroomViewController"
     }
     struct BaseView {
         static let BaseNavigationController             = "BaseNavigationController"

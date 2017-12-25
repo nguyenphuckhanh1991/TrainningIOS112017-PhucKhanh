@@ -14,6 +14,7 @@ enum APIType {
     case register
     case timeline
     case fetchAvaImage
+    case createChatroom
 }
 enum httpMethod: String {
     case post = "POST"
@@ -37,6 +38,8 @@ struct AppServices {
             pathParam = "/logout"
         case .timeline:
             pathParam = "/chatroom?page=\(parameter![AppKey.Chatroom.page] ?? 0)&page_size=\(parameter![AppKey.Chatroom.pagesize] ?? 10)"
+        case .createChatroom:
+            pathParam = "/chatroom"
         case .fetchAvaImage:
             if let avatarUrl = parameter![AppKey.Chatroom.avatarUrl] as? String {
                 pathParam = avatarUrl
@@ -99,7 +102,6 @@ struct AppServices {
         request.httpMethod = httpMethod.rawValue
         dataTask = session.dataTask(with: request) { (data, _, error) in
             if let jsonData = data {
-                //print(jsonData)
                 completion(jsonData as AnyObject, error)
             } else {
                 completion(nil, error)
