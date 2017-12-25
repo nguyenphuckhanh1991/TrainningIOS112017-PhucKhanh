@@ -13,18 +13,18 @@ class ProfileTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    let firstProfileCellNib = UINib(nibName: "FirstProfileCell", bundle: nil)
-    self.tableView.register(firstProfileCellNib, forCellReuseIdentifier: "FirstProfileCell")
+    let firstProfileCellNib = UINib(nibName: Storyboard.CustomCell.FirstProfileCell, bundle: nil)
+    self.tableView.register(firstProfileCellNib, forCellReuseIdentifier: Storyboard.CustomCell.FirstProfileCell)
     self.tableView.estimatedRowHeight = 471
-    let firstCommentTableViewCell = UINib(nibName: "FirstCommentTableViewCell", bundle: nil)
-    self.tableView.register(firstCommentTableViewCell, forCellReuseIdentifier: "FirstCommentTableViewCell")
+    let firstCommentTableViewCell = UINib(nibName: Storyboard.CustomCell.FirstCommentTableViewCell, bundle: nil)
+    self.tableView.register(firstCommentTableViewCell, forCellReuseIdentifier: Storyboard.CustomCell.FirstCommentTableViewCell)
     let encodedData = NSKeyedArchiver.archivedData(withRootObject: userInfo)
-    UserDefaults.standard.set(encodedData, forKey: "user")
+    UserDefaults.standard.set(encodedData, forKey: AppKey.UserDefaultKey.user)
     UserDefaults.standard.synchronize()
   }
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    let data = UserDefaults.standard.value(forKey: "user") as? Data
+    let data = UserDefaults.standard.value(forKey: AppKey.UserDefaultKey.user) as? Data
      userInfo = (NSKeyedUnarchiver.unarchiveObject(with: data!) as? User)!
     self.tableView.reloadData()
   }
@@ -34,12 +34,12 @@ class ProfileTableViewController: UITableViewController {
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if indexPath.row == 0 {
-      if let cell = tableView.dequeueReusableCell(withIdentifier: "FirstProfileCell", for: indexPath) as? FirstProfileCell {
+      if let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.CustomCell.FirstProfileCell, for: indexPath) as? FirstProfileCell {
         cell.configureCell(user: userInfo)
         return cell
       }
     } else {
-      if let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCommentTableViewCell", for: indexPath) as? FirstCommentTableViewCell {
+      if let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.CustomCell.FirstCommentTableViewCell, for: indexPath) as? FirstCommentTableViewCell {
         return cell
       }
     }

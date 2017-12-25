@@ -39,35 +39,35 @@ class StatusCellItem: NSObject, NSCoding {
     self.shareLabel = shareLabel
   }
   required init?(coder aDecoder: NSCoder) {
-    self.avaImage = aDecoder.decodeObject(forKey: "avaImage") as? UIImage ?? nil
-    self.statusImage = aDecoder.decodeObject(forKey: "statusImage") as? UIImage ?? nil
-    self.contentStateImage = aDecoder.decodeObject(forKey: "contentStateImage") as? UIImage ?? nil
-    self.likeImage = aDecoder.decodeObject(forKey: "likeImage") as? UIImage ?? nil
-    self.commentImage = aDecoder.decodeObject(forKey: "commentImage") as? UIImage ?? nil
-    self.shareImage = aDecoder.decodeObject(forKey: "shareImage") as? UIImage ?? nil
-    self.status = aDecoder.decodeObject(forKey: "status") as? String ?? ""
-    self.name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
-    self.date = aDecoder.decodeObject(forKey: "date") as? String ?? ""
-    self.likeCount = aDecoder.decodeObject(forKey: "likeCount") as? String ?? ""
-    self.commentCount = aDecoder.decodeObject(forKey: "commentCount") as? String ?? ""
-    self.commentLabel = aDecoder.decodeObject(forKey: "commentLabel") as? String ?? ""
-    self.likeLabel = aDecoder.decodeObject(forKey: "likeLabel") as? String ?? ""
-    self.shareLabel = aDecoder.decodeObject(forKey: "shareLabel") as? String ?? ""
+    self.avaImage = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.avatarImage) as? UIImage ?? nil
+    self.statusImage = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.statusImage) as? UIImage ?? nil
+    self.contentStateImage = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.contentStateImage) as? UIImage ?? nil
+    self.likeImage = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.likeImage) as? UIImage ?? nil
+    self.commentImage = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.commentImage) as? UIImage ?? nil
+    self.shareImage = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.shareImage) as? UIImage ?? nil
+    self.status = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.status) as? String ?? ""
+    self.name = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.userName) as? String ?? ""
+    self.date = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.date) as? String ?? ""
+    self.likeCount = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.likeCount) as? String ?? ""
+    self.commentCount = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.commentCount) as? String ?? ""
+    self.commentLabel = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.commentLabel) as? String ?? ""
+    self.likeLabel = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.likeLabel) as? String ?? ""
+    self.shareLabel = aDecoder.decodeObject(forKey: AppKey.StatusPropertyKey.shareLabel) as? String ?? ""
   }
   func encode(with aCoder: NSCoder) {
-    aCoder.encode(self.avaImage, forKey: "avaImage")
-    aCoder.encode(self.avaImage, forKey: "statusImage")
-    aCoder.encode(self.contentStateImage, forKey: "contentStateImage")
-    aCoder.encode(self.likeImage, forKey: "likeImage")
-    aCoder.encode(self.commentImage, forKey: "commentImage")
-    aCoder.encode(self.shareImage, forKey: "shareImage")
-    aCoder.encode(self.status, forKey: "status")
-    aCoder.encode(self.name, forKey: "name")
-    aCoder.encode(self.date, forKey: "date")
-    aCoder.encode(self.likeCount, forKey: "likeCount")
-    aCoder.encode(self.commentCount, forKey: "commentCount")
-    aCoder.encode(self.commentLabel, forKey: "commentLabel")
-    aCoder.encode(self.likeLabel, forKey: "likeLabel")
-    aCoder.encode(self.shareLabel, forKey: "shareLabel")
+    aCoder.encode(self.avaImage, forKey: AppKey.StatusPropertyKey.avatarImage)
+    aCoder.encode(self.avaImage, forKey: AppKey.StatusPropertyKey.statusImage)
+    aCoder.encode(self.contentStateImage, forKey: AppKey.StatusPropertyKey.contentStateImage)
+    aCoder.encode(self.likeImage, forKey: AppKey.StatusPropertyKey.likeImage)
+    aCoder.encode(self.commentImage, forKey: AppKey.StatusPropertyKey.commentImage)
+    aCoder.encode(self.shareImage, forKey: AppKey.StatusPropertyKey.shareImage)
+    aCoder.encode(self.status, forKey: AppKey.StatusPropertyKey.status)
+    aCoder.encode(self.name, forKey: AppKey.StatusPropertyKey.userName)
+    aCoder.encode(self.date, forKey: AppKey.StatusPropertyKey.date)
+    aCoder.encode(self.likeCount, forKey: AppKey.StatusPropertyKey.likeCount)
+    aCoder.encode(self.commentCount, forKey: AppKey.StatusPropertyKey.commentCount)
+    aCoder.encode(self.commentLabel, forKey: AppKey.StatusPropertyKey.commentLabel)
+    aCoder.encode(self.likeLabel, forKey: AppKey.StatusPropertyKey.likeLabel)
+    aCoder.encode(self.shareLabel, forKey: AppKey.StatusPropertyKey.shareLabel)
   }
 }
