@@ -28,7 +28,11 @@ class TimelineCommentContainerView: BaseViewController {
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
+<<<<<<< HEAD
     if segue.identifier == Storyboard.Timeline.TimelineTableViewController {
+=======
+    if segue.identifier == Storyboard.Timeline.TimelineCommentTableViewController {
+>>>>>>> fetch-chatroom-to-timeline
       timelineCommentVC = segue.destination as? TimelineCommentTableViewController
   }
 }

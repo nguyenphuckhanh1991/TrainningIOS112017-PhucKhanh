@@ -1,8 +1,8 @@
 //
-//  Key.swift
+//  AppKey.swift
 //  iOSTranning112017
 //
-//  Created by nguyen.phuc.khanh on 12/13/17.
+//  Created by Joy on 12/21/17.
 //  Copyright © 2017 nguyen.phuc.khanh. All rights reserved.
 //
 
@@ -12,6 +12,18 @@ struct AppKey {
         static let username                 = "username"
         static let password                 = "password"
         static let email                    = "email"
+    }
+    struct Chatroom {
+        static let chatrooms                = "chatrooms"
+        static let pagination               = "pagination"
+        static let page                     = "page"
+        static let pagesize                 = "page_size"
+        static let total                    = "total"
+        static let totalpages               = "total_pages"
+        static let lastindex                = "last_index"
+        static let username                 = "name"
+        static let description              = "description"
+        static let avatarUrl                = "avatarUrl"
     }
     struct HeaderKey {
         static let ContentType              = "Content-Type"
@@ -34,6 +46,7 @@ struct AppKey {
         static let success                  = "success"
         static let code                     = "code"
         static let message                  = "message"
+        static let unauthorized             = "UNAUTHORIZED"
     }
     struct UserPropertyKey {
         static let avatarImage              = "avatarImage"
@@ -41,6 +54,13 @@ struct AppKey {
         static let emailAddress             = "emailAddress"
         static let phoneNumber              = "phoneNumber"
         static let dateOfBirth              = "dateOfBirth"
+        static let id                       = "_id"
+    }
+    struct UserPostKey {
+        static let avatarImageURL           = "avatarUrl"
+        static let userName                 = "name"
+        static let description              = "description"
+        static let id                       = "_id"
     }
     struct StatusPropertyKey {
         static let avatarImage              = "avatarImage"

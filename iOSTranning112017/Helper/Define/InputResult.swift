@@ -2,7 +2,7 @@
 //  InputResult.swift
 //  iOSTranning112017
 //
-//  Created by nguyen.phuc.khanh on 12/13/17.
+//  Created by Joy on 12/21/17.
 //  Copyright © 2017 nguyen.phuc.khanh. All rights reserved.
 //
 
