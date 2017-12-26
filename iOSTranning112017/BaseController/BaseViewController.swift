@@ -9,6 +9,12 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    lazy var mainTabBarViewController: MainTabBarController? = {
+        if let _tabBarController = self.tabBarController as? MainTabBarController {
+            return _tabBarController
+        }
+        return self.view.window?.rootViewController as? MainTabBarController
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
     }

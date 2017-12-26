@@ -12,11 +12,8 @@ class LogInViewController: BaseViewController {
     @IBOutlet weak private var emailInputTextField: UITextField!
     @IBOutlet weak private var passwordInputTextField: UITextField!
     @IBOutlet weak private var loginButton: CustomButton!
-<<<<<<< HEAD
-=======
     @IBAction func signUpAction(_ sender: Any) {
     }
->>>>>>> fetch-chatroom-to-timeline
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -37,11 +34,12 @@ class LogInViewController: BaseViewController {
         guard let username = emailInputTextField.text, let password = passwordInputTextField.text else {
             return
         }
-        configUI(isActive: false)
+        //configUI(isActive: false)
         if validateInputField(username: username, password: password) {
             doLogin(username: username, password: password)
         } else {
-            configUI(isActive: true)
+            print("Can't login")
+            //configUI(isActive: true)
         }
     }
     private func doLogin(username: String, password: String) {
@@ -53,6 +51,7 @@ class LogInViewController: BaseViewController {
                     DispatchQueue.main.async {
                         UserDefaults.standard.set(responseData[AppKey.TokenKey.token], forKey: AppKey.TokenKey.token)
                         UserDefaults.standard.synchronize()
+                        self.getUserInfo()
                         self.showMainVC()
                     }
                 } else {
@@ -63,9 +62,25 @@ class LogInViewController: BaseViewController {
             }
         }
     }
+    func getUserInfo() {
+        var appServices = AppServices.init()
+        appServices.request(httpMethod: .get, parameter: nil, apiType: .getMyInfo) { (result, _) in
+            if let responseData: [String: Any] = result {
+                if responseData[AppKey.ResponseKey.success] as? Int == 1 {
+                    guard let userInfo = responseData[AppKey.UserDefaultKey.user] as? [String: Any] else {return}
+                    UserDefaults.standard.set(userInfo, forKey: AppKey.UserDefaultKey.user)
+                    UserDefaults.standard.synchronize()
+                } else {
+                    guard (responseData[AppKey.ResponseKey.message] as? String) != nil else {return}
+                    self.showAlertMessage(title: InputResult.LoginError.titleWrongInputType, message: InputResult.LoginError.messageLoginFail, titleAction: InputResult.LoginError.actionTitle)
+                    self.configUI(isActive: true)
+                }
+            }
+        }
+    }
     func showMainVC() {
         DispatchQueue.main.async {
-            guard let tabbar = UIStoryboard.init(name: Storyboard.Main.timeline, bundle: nil).instantiateViewController(withIdentifier: Storyboard.BaseView.BaseTabbarController) as? BaseTabbarController else {return}
+            guard let tabbar = UIStoryboard.init(name: Storyboard.Main.Main, bundle: nil).instantiateViewController(withIdentifier: Storyboard.Main.MainTabBarController) as? MainTabBarController else {return}
             self.present(tabbar, animated: true, completion: nil)
         }
     }

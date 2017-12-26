@@ -9,55 +9,34 @@
 import UIKit
 
 class TimelineTableViewController: UITableViewController {
-<<<<<<< HEAD
-    var postCell = [StatusCellItem]()
-=======
     fileprivate lazy var activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         activityIndicatorView.hidesWhenStopped = true
         var center = self.view.center
-        //        if let navigationBarFrame = self.navigationController?.navigationBar.frame {
-        //            center.y -= (navigationBarFrame.origin.y + navigationBarFrame.size.height)
-        //        }
         activityIndicatorView.center = center
         self.view.addSubview(activityIndicatorView)
         return activityIndicatorView
     }()
+    lazy var searchBars: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.bounds.width*0.7, height: 20))
     var chatroomCells = [[String: Any]]()
     let pageSize = 10
     var currentPage = 0
     var total = 0
     var lastRowIndex = 0
->>>>>>> fetch-chatroom-to-timeline
     let center = NotificationCenter.default
     let mainQueue = OperationQueue.main
     var notiObserver: NSObjectProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let cellStatusTimelineNib = UINib(nibName: Storyboard.CustomCell.TimeLineTableViewCell, bundle: nil)
-        self.tableView.register(cellStatusTimelineNib, forCellReuseIdentifier: Storyboard.CustomCell.TimeLineTableViewCell)
-        let firstCellTimelineNib = UINib(nibName: Storyboard.CustomCell.FirstTimelineTableViewCell, bundle: nil)
-        self.tableView.register(firstCellTimelineNib, forCellReuseIdentifier: Storyboard.CustomCell.FirstTimelineTableViewCell)
-<<<<<<< HEAD
-        self.tableView.estimatedRowHeight = 194
-        notiObserver = center.addObserver(forName: NSNotification.Name(rawValue: Storyboard.Notification.postStatus), object: nil, queue: mainQueue) { (notification: Notification) in
-            guard let userInfo = notification.userInfo, let postCell = userInfo[Storyboard.Notification.postItem] as? StatusCellItem else {
-                return
-            }
-            self.createPost(newPostCell: postCell)
-        }
-        fetchPostCell()
-=======
-        let chatroomCellNib = UINib(nibName: Storyboard.CustomCell.ChatroomCell, bundle: nil)
-        self.tableView.register(chatroomCellNib, forCellReuseIdentifier: Storyboard.CustomCell.ChatroomCell)
         //        notiObserver = center.addObserver(forName: NSNotification.Name(rawValue: Storyboard.Notification.postStatus), object: nil, queue: mainQueue) { (notification: Notification) in
         //            //            guard let userInfo = notification.userInfo, let postCell = userInfo[Storyboard.Notification.postItem] as? StatusCellItem else {
         //            //                return
         //            //            }
         //            //self.createPost(newPostCell: postCell)
         //        }
+        setUpNavigation()
+        registerCell()
         fetchChatroomCell(page: 0)
->>>>>>> fetch-chatroom-to-timeline
         tableView.bounces = false
     }
     deinit {
@@ -66,50 +45,39 @@ class TimelineTableViewController: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         super.viewWillDisappear(animated)
-        if let statusBar: UIView = UIApplication.shared.value(forKey: Storyboard.CustomView.statusBar) as? UIView {
-            statusBar.backgroundColor = UIColor.clear
-        }
-        UIApplication.shared.statusBarStyle = .lightContent
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-        if let statusBar: UIView = UIApplication.shared.value(forKey: Storyboard.CustomView.statusBar) as? UIView {
-            statusBar.backgroundColor = UIColor(red: 78/255.0, green: 105/255.0, blue: 162/255.0, alpha: 1)
-        }
-        UIApplication.shared.statusBarStyle = .lightContent
-<<<<<<< HEAD
-=======
-        self.tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
->>>>>>> fetch-chatroom-to-timeline
+        self.navigationController?.isNavigationBarHidden = false
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-<<<<<<< HEAD
-    func fetchPostCell() {
-        let postItem = StatusCellItem(avaImage: #imageLiteral(resourceName: "ava_olson"), statusImage: #imageLiteral(resourceName: "stt_picture"), contentStateImage: #imageLiteral(resourceName: "public_timeline"), likeImage: #imageLiteral(resourceName: "ic_like"), commentImage: #imageLiteral(resourceName: "ic_comment"), shareImage: #imageLiteral(resourceName: "ic_share"), status: "Brainstorming over some wireframes for an upcoming app.", name: "Tammy Olson", date: "2hrs .", likeCount: "69 likes", commentCount: "70 comments", likeLabel: "Like", commentLabel: "Comment", shareLabel: "Share")
-        for _ in 0...10 {
-            postCell.append(postItem)
-        }
+    func setUpNavigation() {
+        let leftNavBarButton = UIBarButtonItem(customView: searchBars)
+        navigationController?.navigationBar.barTintColor = UIColor(red: 78/255.0, green: 105/255.0, blue: 162/255.0, alpha: 1)
+        self.navigationItem.leftBarButtonItem = leftNavBarButton
+        let rightNavBarButton = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logOut))
+        rightNavBarButton.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = rightNavBarButton
     }
-    func createPost(newPostCell: StatusCellItem) {
-        postCell.insert(newPostCell, at: 0)
-        tableView.reloadData()
+    func registerCell() {
+        let cellStatusTimelineNib = UINib(nibName: Storyboard.CustomCell.TimeLineTableViewCell, bundle: nil)
+        self.tableView.register(cellStatusTimelineNib, forCellReuseIdentifier: Storyboard.CustomCell.TimeLineTableViewCell)
+        let firstCellTimelineNib = UINib(nibName: Storyboard.CustomCell.FirstTimelineTableViewCell, bundle: nil)
+        self.tableView.register(firstCellTimelineNib, forCellReuseIdentifier: Storyboard.CustomCell.FirstTimelineTableViewCell)
+        let chatroomCellNib = UINib(nibName: Storyboard.CustomCell.ChatroomCell, bundle: nil)
+        self.tableView.register(chatroomCellNib, forCellReuseIdentifier: Storyboard.CustomCell.ChatroomCell)
     }
-    // MARK: - Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postCell.count
-=======
     func fetchChatroomCell(page: Int) {
         activityIndicatorView.startAnimating()
         var appService = AppServices.init()
-        let parameters = [AppKey.Chatroom.page: String(page), AppKey.Chatroom.pagesize: String( pageSize)]
+        let parameters = [AppKey.Chatroom.page: String(page), AppKey.Chatroom.pagesize: String(pageSize)]
         appService.request(httpMethod: .get, parameter: parameters, apiType: .timeline) { (data, error) in
-            DispatchQueue.main.async {
-                self.activityIndicatorView.stopAnimating()
-            }
             if let responseData = data {
+                DispatchQueue.main.async {
+                    self.activityIndicatorView.stopAnimating()
+                }
                 if responseData[AppKey.ResponseKey.success] as? Int == 1 {
                     guard let pagination = responseData[AppKey.Chatroom.pagination] as? [String: Int], let chatrooms = responseData[AppKey.Chatroom.chatrooms] as? [[String: Any]] else {return}
                     if self.chatroomCells.count == self.total {
@@ -141,7 +109,6 @@ class TimelineTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chatroomCells.count
->>>>>>> fetch-chatroom-to-timeline
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
@@ -150,33 +117,29 @@ class TimelineTableViewController: UITableViewController {
                 return cell
             }
         } else {
-<<<<<<< HEAD
-            if let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.CustomCell.TimeLineTableViewCell, for: indexPath) as? TimeLineTableViewCell {
-                cell.configureCell(listCell: postCell[indexPath.row - 1])
-                cell.delegate = self
-=======
             if let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.CustomCell.ChatroomCell, for: indexPath) as? ChatroomCell {
                 cell.configureCell(data: chatroomCells[indexPath.row])
                 //cell.delegate = self
->>>>>>> fetch-chatroom-to-timeline
                 return cell
             }
         }
         return UITableViewCell()
     }
-<<<<<<< HEAD
-=======
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == chatroomCells.count - 1 {
             if lastRowIndex == 0 {
                 currentPage += 1
+            }
+            cell.alpha = 0
+            UIView.animate(withDuration: 1.0) {
+                cell.alpha = 1
             }
             fetchChatroomCell(page: currentPage)
         }
     }
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 194
+            return 138
         } else {
             return 64
         }
@@ -184,10 +147,9 @@ class TimelineTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
->>>>>>> fetch-chatroom-to-timeline
 }
 extension TimelineTableViewController: TimeLineTableViewCellDelegate, FirstTimelineTableViewCellDelegate {
-    func logOut() {
+    @objc func logOut() {
         var appService = AppServices.init()
         appService.request(httpMethod: .post, parameter: nil, apiType: .logout) { (data, error) in
             if let responseData: [String: Any] = data {
@@ -206,16 +168,16 @@ extension TimelineTableViewController: TimeLineTableViewCellDelegate, FirstTimel
         DispatchQueue.main.async {
             UserDefaults.standard.removePersistentDomain(forName:
                 Bundle.main.bundleIdentifier!)
-            guard let tabbar = UIStoryboard.init(name: Storyboard.Main.login, bundle: nil).instantiateViewController(withIdentifier: Storyboard.BaseView.BaseNavigationController) as? BaseNavigationController else {return}
+            guard let tabbar = UIStoryboard.init(name: Storyboard.Main.Main, bundle: nil).instantiateViewController(withIdentifier: Storyboard.Main.MainTabBarController) as? MainTabBarController else {return}
             self.present(tabbar, animated: true, completion: nil)
         }
     }
     func presentPostStatus() {
-        let postStatusVC = UIStoryboard.init(name: Storyboard.Main.timeline, bundle: nil).instantiateViewController(withIdentifier: Storyboard.Timeline.PostViewController)
-        navigationController?.present(postStatusVC, animated: true, completion: nil)
+        let postStatusVC = UIStoryboard.init(name: Storyboard.Timeline.Timeline, bundle: nil).instantiateViewController(withIdentifier: Storyboard.Chatroom.createChatroomViewController)
+        present(postStatusVC, animated: true, completion: nil)
     }
     func commentPush() {
-        let timeLineCommentVC = UIStoryboard.init(name: Storyboard.Main.timeline, bundle: nil).instantiateViewController(withIdentifier: Storyboard.Timeline.TimelineCommentTableViewController)
+        let timeLineCommentVC = UIStoryboard.init(name: Storyboard.Timeline.Timeline, bundle: nil).instantiateViewController(withIdentifier: Storyboard.Chatroom.createChatroomViewController)
         navigationController?.pushViewController(timeLineCommentVC, animated: true)
     }
 }

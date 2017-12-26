@@ -11,7 +11,7 @@ import UIKit
 class StartViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.checkLogged()
+        self.checkApp()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -19,31 +19,22 @@ class StartViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-    private func checkLogged() {
-        if isLogged() {
-            gotoMainApp()
+    private func checkApp() {
+        if !isLogged() {
+            self.perform(#selector(StartViewController.gotoLogin), with: nil, afterDelay: 0)
         } else {
-            gotoLogin()
+            self.perform(#selector(StartViewController.gotoMainApp), with: nil, afterDelay: 0)
         }
     }
     func isLogged() -> Bool {
-        guard UserDefaults.standard.value(forKey: AppKey.TokenKey.token) != nil else {
-            return false
-        }
+        guard UserDefaults.standard.value(forKey: AppKey.TokenKey.token) != nil else {return false}
         return true
     }
-    func gotoLogin() {
-        guard let userSettingVC = UIStoryboard.init(name: Storyboard.Main.login, bundle: nil).instantiateViewController(withIdentifier: Storyboard.BaseView.BaseNavigationController) as? BaseNavigationController else {
-            return
-        }
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        appDelegate?.window?.rootViewController = userSettingVC
+    @objc func gotoLogin() {
+        let userLoginVC = LogInViewController.getViewControllerFromStoryboard(Storyboard.Login.Login)
+        self.present(userLoginVC, animated: true, completion: nil)
     }
-    func gotoMainApp() {
-        guard let userSettingVC = UIStoryboard.init(name: Storyboard.Main.timeline, bundle: nil).instantiateViewController(withIdentifier: Storyboard.BaseView.BaseTabbarController) as? BaseTabbarController else {
-            return
-        }
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-        appDelegate?.window?.rootViewController = userSettingVC
+    @objc func gotoMainApp() {
+        self.mainTabBarViewController?.setupMainApp()
     }
 }

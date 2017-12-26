@@ -43,6 +43,7 @@ struct AppKey {
         static let tokeType                 = "token_type"
     }
     struct ResponseKey {
+        static let chatroom                 = "chatroom"
         static let success                  = "success"
         static let code                     = "code"
         static let message                  = "message"
@@ -50,17 +51,26 @@ struct AppKey {
     }
     struct UserPropertyKey {
         static let avatarImage              = "avatarImage"
+        static let userName                 = "username"
+        static let emailAddress             = "email"
+        static let phoneNumber              = "phoneNumber"
+        static let dateOfBirth              = "dateOfBirth"
+        static let userId                   = "_id"
+    }
+    struct UserInfoKey {
+        static let user                     = "user"
+        static let avaImage                 = "avatar"
         static let userName                 = "userName"
         static let emailAddress             = "emailAddress"
         static let phoneNumber              = "phoneNumber"
         static let dateOfBirth              = "dateOfBirth"
-        static let id                       = "_id"
+        static let userId                   = "_id"
     }
     struct UserPostKey {
         static let avatarImageURL           = "avatarUrl"
         static let userName                 = "name"
         static let description              = "description"
-        static let id                       = "_id"
+        static let userId                   = "_id"
     }
     struct StatusPropertyKey {
         static let avatarImage              = "avatarImage"

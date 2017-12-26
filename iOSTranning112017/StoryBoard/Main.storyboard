@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K0i-PD-bGj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="smc-VA-Lna">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="K0i-PD-bGj" customClass="MainTabBarController" customModule="iOSTranning112017" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Jjw-SB-ezc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6e-LL-hih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1231" y="862"/>
+        </scene>
+        <!--Start View Controller-->
+        <scene sceneID="A3j-vj-QRd">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="xgk-jq-Sh6" customClass="StartViewController" customModule="iOSTranning112017" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uhs-at-T5p"/>
+                        <viewControllerLayoutGuide type="bottom" id="mth-hi-hsz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uae-B7-x4c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="lEN-cb-WZD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="IQU-Bw-juj">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbo-9F-ZfJ">
+                                <rect key="frame" x="0.0" y="282.5" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mth-hi-hsz" firstAttribute="top" secondItem="lEN-cb-WZD" secondAttribute="bottom" id="67B-7l-WPr"/>
+                            <constraint firstItem="IQU-Bw-juj" firstAttribute="centerX" secondItem="uae-B7-x4c" secondAttribute="centerX" id="BZT-mL-B0e"/>
+                            <constraint firstItem="lEN-cb-WZD" firstAttribute="leading" secondItem="lw2-I5-6i0" secondAttribute="leading" id="IHa-Fm-fpW"/>
+                            <constraint firstItem="Zbo-9F-ZfJ" firstAttribute="leading" secondItem="uae-B7-x4c" secondAttribute="leading" id="JA4-mC-peE"/>
+                            <constraint firstAttribute="trailing" secondItem="Zbo-9F-ZfJ" secondAttribute="trailing" id="Oyy-q3-Xx0"/>
+                            <constraint firstItem="IQU-Bw-juj" firstAttribute="top" secondItem="Zbo-9F-ZfJ" secondAttribute="bottom" constant="20" id="f8E-MC-w1c"/>
+                            <constraint firstItem="lEN-cb-WZD" firstAttribute="top" secondItem="uhs-at-T5p" secondAttribute="bottom" id="gGe-HE-4KS"/>
+                            <constraint firstItem="IQU-Bw-juj" firstAttribute="centerY" secondItem="uae-B7-x4c" secondAttribute="centerY" id="iAQ-F5-aJ7"/>
+                            <constraint firstItem="lw2-I5-6i0" firstAttribute="trailing" secondItem="lEN-cb-WZD" secondAttribute="trailing" id="xyW-pQ-WAE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lw2-I5-6i0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Hx-Sy-ftx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447.19999999999999" y="861.3193403298352"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="213" height="378"/>
+    </resources>
+</document>

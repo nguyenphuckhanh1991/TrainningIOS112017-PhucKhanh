@@ -15,8 +15,8 @@ class User: NSObject, NSCoding {
     var phoneNumber: String?
     var dateOfBirth: String?
     var idUser: String?
-    init?(json:[String: Any]) {
-        self.idUser = json[AppKey.UserPostKey.id] as? String
+    init?(json: [String: Any]) {
+        self.idUser = json[AppKey.UserPostKey.userId] as? String
     }
     override init() {
         super.init()
@@ -41,5 +41,15 @@ class User: NSObject, NSCoding {
         coder.encode(emailAddress, forKey: "emailAddress")
         coder.encode(phoneNumber, forKey: "phoneNumber")
         coder.encode(dateOfBirth, forKey: "dateOfBirth")
+    }
+    func getData() {
+        guard let userInfo = UserDefaults.standard.value(forKey: AppKey.UserDefaultKey.user) as? [String: Any] else {
+            return
+        }
+        self.avatarImage = #imageLiteral(resourceName: "ava_naomi_kyle")
+        self.dateOfBirth = "06/09/1991"
+        self.phoneNumber = "01656123319"
+        self.userName = userInfo[AppKey.UserPropertyKey.userName] as? String
+        self.emailAddress = userInfo[AppKey.UserPropertyKey.emailAddress] as? String
     }
 }

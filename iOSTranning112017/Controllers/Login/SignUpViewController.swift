@@ -55,7 +55,7 @@ class SignUpViewController: BaseViewController {
     }
     func showLoginVC() {
         DispatchQueue.main.async {
-            guard let tabbar = UIStoryboard.init(name: Storyboard.Main.login, bundle: nil).instantiateViewController(withIdentifier: Storyboard.BaseView.BaseNavigationController) as? BaseNavigationController else {return}
+            guard let tabbar = UIStoryboard.init(name: Storyboard.Login.Login, bundle: nil).instantiateViewController(withIdentifier: Storyboard.BaseView.BaseNavigationController) as? BaseNavigationController else {return}
             self.present(tabbar, animated: true, completion: nil)
         }
     }

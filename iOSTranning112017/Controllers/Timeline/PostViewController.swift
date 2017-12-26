@@ -68,18 +68,18 @@ class PostViewController: UIViewController {
   }
   @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
     self.bottomAddMoreStt.constant = -240
-    runAnimate()
+    //runAnimate()
     statusImageView.isHidden = false
   }
   @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
     self.bottomAddMoreStt.constant = 0
     statusImageView.isHidden = true
-    runAnimate()
+    //runAnimate()
   }
   @IBAction func addYourPostTapped(_ sender: UIButton) {
     self.bottomAddMoreStt.constant = 0
     statusImageView.isHidden = true
-    runAnimate()
+    //runAnimate()
   }
 }
 extension PostViewController: UITextViewDelegate {
@@ -111,10 +111,10 @@ extension PostViewController: UIImagePickerControllerDelegate, UINavigationContr
     dismiss(animated: true, completion: nil)
   }
 }
-extension UIViewController {
-  func runAnimate() {
-    UIView.animate(withDuration: 0.5, animations: {
-      self.view.layoutIfNeeded()
-    })
-  }
-}
+//extension UIViewController {
+//  func runAnimate() {
+//    UIView.animate(withDuration: 0.5, animations: {
+//      self.view.layoutIfNeeded()
+//    })
+//  }
+//}

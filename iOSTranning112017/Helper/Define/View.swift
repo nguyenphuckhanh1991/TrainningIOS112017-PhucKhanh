@@ -11,22 +11,37 @@ import Foundation
 
 struct Storyboard {
     struct Main {
-        static let login                                = "Login"
-        static let timeline                             = "Timeline"
+        static let Main                                 = "Main"
+        static let StartViewController                  = "StartViewController"
+        static let MainTabBarController                  = "MainTabBarController"
     }
-    struct Timeline {
-        static let TimelineTableViewController          = "TimelineTableViewController"
-        static let TimelineCommentContainerView         = "TimelineCommentContainerView"
-        static let TimelineCommentTableViewController   = "TimelineCommentTableViewController"
-        static let PostViewController                   = "PostViewController"
+    struct User {
+        static let User                                 = "User"
         static let ProfileTableViewController           = "ProfileTableViewController"
         static let EditProfileTableViewController       = "EditProfileTableViewController"
+    }
+    struct Login {
+        static let Login                                = "Login"
+        static let logInViewController                  = "LogInViewController"
+        static let signUpViewController                 = "SignUpViewController"
+        static let logInNavigation                      = "LoginNavigation"
+    }
+    struct Chatroom {
+        static let Chatroom                             = "Chatroom"
+        static let createChatroomViewController         = "CreateChatroomViewController"
+        static let avatarImageViewController            = "AvatarImageViewController"
+    }
+    struct Timeline {
+        static let Timeline                             = "Timeline"
+        static let timelineTableViewController          = "TimelineTableViewController"
+        static let timelineCommentContainerView         = "TimelineCommentContainerView"
+        static let timelineCommentTableViewController   = "TimelineCommentTableViewController"
+        static let postViewController                   = "PostViewController"
     }
     struct BaseView {
         static let BaseNavigationController             = "BaseNavigationController"
         static let BaseTabbarController                 = "BaseTabbarController"
         static let BaseViewController                   = "BaseViewController"
-        static let StartViewController                  = "StartViewController"
     }
     struct CustomCell {
         static let FirstProfileCell                     = "FirstProfileCell"
@@ -35,6 +50,7 @@ struct Storyboard {
         static let CustomCommentCell                    = "CustomCommentCell"
         static let TimeLineTableViewCell                = "TimeLineTableViewCell"
         static let ChatroomCell                         = "ChatroomCell"
+        static let AvaImageCollectionViewCell           = "AvaImageCollectionViewCell"
     }
     struct Notification {
         static let postStatus                           = "postStatus"
@@ -42,5 +58,9 @@ struct Storyboard {
     }
     struct CustomView {
         static let statusBar                            = "statusBar"
+    }
+    struct TabBarTitle {
+        static let timeline                             = "Timeline"
+        static let profile                              = "Profile"
     }
 }
