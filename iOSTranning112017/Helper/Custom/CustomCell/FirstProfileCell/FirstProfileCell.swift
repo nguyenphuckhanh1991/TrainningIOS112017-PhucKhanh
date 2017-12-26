@@ -34,12 +34,21 @@ class FirstProfileCell: UITableViewCell {
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
     // Configure the view for the selected state
-  }
-  func configureCell(user: User) {
-    self.avaImageView.image = user.avatarImage
-    self.nameLabel.text = user.userName
-    self.phoneNumberLabel.text = user.phoneNumber
-    self.emailLabel.text = user.emailAddress
-    self.birthDayLabel.text = user.dateOfBirth
-  }
+    }
+    func configureCell(user: [String: Any]) {
+        DispatchQueue.main.async {
+                        self.avaImageView.image = user[AppKey.UserInfoKey.avaImage] as? UIImage
+                        self.nameLabel.text = user[AppKey.UserInfoKey.userName] as? String
+                        self.emailLabel.text = user[AppKey.UserInfoKey.emailAddress] as? String
+                        self.phoneNumberLabel.text = user[AppKey.UserInfoKey.phoneNumber] as? String
+                        self.birthDayLabel.text = user[AppKey.UserInfoKey.dateOfBirth] as? String
+        }
+    }
+//  func configureCell(user: User) {
+//    self.avaImageView.image = user.avatarImage
+//    self.nameLabel.text = user.userName
+//    self.phoneNumberLabel.text = user.phoneNumber
+//    self.emailLabel.text = user.emailAddress
+//    self.birthDayLabel.text = user.dateOfBirth
+//  }
 }

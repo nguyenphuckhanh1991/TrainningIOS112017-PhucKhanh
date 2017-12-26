@@ -14,6 +14,8 @@ enum APIType {
     case register
     case timeline
     case fetchAvaImage
+    case createChatroom
+    case getMyInfo
 }
 enum httpMethod: String {
     case post = "POST"
@@ -37,6 +39,10 @@ struct AppServices {
             pathParam = "/logout"
         case .timeline:
             pathParam = "/chatroom?page=\(parameter![AppKey.Chatroom.page] ?? 0)&page_size=\(parameter![AppKey.Chatroom.pagesize] ?? 10)"
+        case .createChatroom:
+            pathParam = "/chatroom"
+        case .getMyInfo:
+            pathParam = "/users/me"
         case .fetchAvaImage:
             if let avatarUrl = parameter![AppKey.Chatroom.avatarUrl] as? String {
                 pathParam = avatarUrl

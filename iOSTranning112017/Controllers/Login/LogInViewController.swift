@@ -12,11 +12,8 @@ class LogInViewController: BaseViewController {
     @IBOutlet weak private var emailInputTextField: UITextField!
     @IBOutlet weak private var passwordInputTextField: UITextField!
     @IBOutlet weak private var loginButton: CustomButton!
-<<<<<<< HEAD
-=======
     @IBAction func signUpAction(_ sender: Any) {
     }
->>>>>>> fetch-chatroom-to-timeline
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -63,6 +60,23 @@ class LogInViewController: BaseViewController {
             }
         }
     }
+//    func getUserInfo() {
+//        var appServices = AppServices.init()
+//        appServices.request(httpMethod: .get, parameter: nil, apiType: .getMyInfo) { (result, error) in
+//            if let responseData: [String: Any] = result {
+//                if responseData[AppKey.ResponseKey.success] as? Int == 1 {
+//                    guard let userInfo = responseData[AppKey.UserDefaultKey.user] as? [String: Any] else {
+//                        return
+//
+//                    }
+//                } else {
+//                    guard (responseData[AppKey.ResponseKey.message] as? String) != nil else {return}
+//                    self.showAlertMessage(title: InputResult.LoginError.titleWrongInputType, message: InputResult.LoginError.messageLoginFail, titleAction: InputResult.LoginError.actionTitle)
+//                    self.configUI(isActive: true)
+//                }
+//            }
+//        }
+//    }
     func showMainVC() {
         DispatchQueue.main.async {
             guard let tabbar = UIStoryboard.init(name: Storyboard.Main.timeline, bundle: nil).instantiateViewController(withIdentifier: Storyboard.BaseView.BaseTabbarController) as? BaseTabbarController else {return}

@@ -21,6 +21,8 @@ struct Storyboard {
         static let PostViewController                   = "PostViewController"
         static let ProfileTableViewController           = "ProfileTableViewController"
         static let EditProfileTableViewController       = "EditProfileTableViewController"
+        static let CreateChatroomViewController         = "CreateChatroomViewController"
+        static let AvatarImageViewController            = "AvatarImageViewController"
     }
     struct BaseView {
         static let BaseNavigationController             = "BaseNavigationController"
@@ -35,6 +37,7 @@ struct Storyboard {
         static let CustomCommentCell                    = "CustomCommentCell"
         static let TimeLineTableViewCell                = "TimeLineTableViewCell"
         static let ChatroomCell                         = "ChatroomCell"
+        static let AvaImageCollectionViewCell           = "AvaImageCollectionViewCell"
     }
     struct Notification {
         static let postStatus                           = "postStatus"

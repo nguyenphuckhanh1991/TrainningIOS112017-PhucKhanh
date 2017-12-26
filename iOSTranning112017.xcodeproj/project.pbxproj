@@ -39,21 +39,23 @@
 		B73874831FF0A80A004024A7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73874821FF0A80A004024A7 /* Post.swift */; };
 		B73E24EE1FBC37C500F08566 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E24ED1FBC37C500F08566 /* BaseNavigationController.swift */; };
 		B73E24F01FBC380700F08566 /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E24EF1FBC380700F08566 /* BaseTabbarController.swift */; };
-		B7428BC01FE76BC300EECF10 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7428BBF1FE76BC300EECF10 /* AppServices.swift */; };
+		B740846B1FF25721003354E5 /* CreateChatroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B740846A1FF25721003354E5 /* CreateChatroomViewController.swift */; };
 		B75CE9321FC3C899005176A0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CE9311FC3C899005176A0 /* PostViewController.swift */; };
 		B75CE9391FC3E44D005176A0 /* StatusCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CE9381FC3E44D005176A0 /* StatusCellItem.swift */; };
 		B76B527F1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B527E1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift */; };
 		B77347E91FDFC4950080C885 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77347E81FDFC4950080C885 /* StartViewController.swift */; };
-		B7B71FC71FE12D7200170BBB /* InputResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B71FC61FE12D7200170BBB /* InputResult.swift */; };
 		B7CE165A1FBD82EF0096DD38 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CE16591FBD82EF0096DD38 /* TimelineTableViewController.swift */; };
 		B7D9220A1FB9893F00F52637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D922091FB9893F00F52637 /* AppDelegate.swift */; };
 		B7D9223E1FB98B9200F52637 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D9223D1FB98B9200F52637 /* LogInViewController.swift */; };
+		B7E2652C1FF341E300C09EFA /* ChatroomImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2652B1FF341E300C09EFA /* ChatroomImageStore.swift */; };
+		B7E265301FF34CF900C09EFA /* AvaImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E2652E1FF34CF900C09EFA /* AvaImageCollectionViewCell.swift */; };
+		B7E265311FF34CF900C09EFA /* AvaImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E2652F1FF34CF900C09EFA /* AvaImageCollectionViewCell.xib */; };
+		B7E265331FF34D9600C09EFA /* AvatarImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E265321FF34D9600C09EFA /* AvatarImageViewController.swift */; };
 		B7ED5AB41FECA1EE00946515 /* InputResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB11FECA1ED00946515 /* InputResult.swift */; };
 		B7ED5AB51FECA1EE00946515 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB21FECA1ED00946515 /* View.swift */; };
 		B7ED5AB61FECA1EE00946515 /* AppKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB31FECA1EE00946515 /* AppKey.swift */; };
 		B7ED5ABA1FECA23200946515 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB81FECA23100946515 /* ImageCache.swift */; };
 		B7ED5ABB1FECA23200946515 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ED5AB91FECA23200946515 /* AppService.swift */; };
-		B7F746D31FE11F0500108B6A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F746D21FE11F0500108B6A /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,7 @@
 		B73874821FF0A80A004024A7 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B73E24ED1FBC37C500F08566 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		B73E24EF1FBC380700F08566 /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		B740846A1FF25721003354E5 /* CreateChatroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChatroomViewController.swift; sourceTree = "<group>"; };
 		B7428BBF1FE76BC300EECF10 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
 		B75CE9311FC3C899005176A0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		B75CE9381FC3E44D005176A0 /* StatusCellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCellItem.swift; sourceTree = "<group>"; };
@@ -106,6 +109,10 @@
 		B7D922161FB9893F00F52637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7D922181FB9893F00F52637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7D9223D1FB98B9200F52637 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		B7E2652B1FF341E300C09EFA /* ChatroomImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomImageStore.swift; sourceTree = "<group>"; };
+		B7E2652E1FF34CF900C09EFA /* AvaImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvaImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7E2652F1FF34CF900C09EFA /* AvaImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvaImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		B7E265321FF34D9600C09EFA /* AvatarImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageViewController.swift; sourceTree = "<group>"; };
 		B7ED5AB11FECA1ED00946515 /* InputResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputResult.swift; sourceTree = "<group>"; };
 		B7ED5AB21FECA1ED00946515 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		B7ED5AB31FECA1EE00946515 /* AppKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppKey.swift; sourceTree = "<group>"; };
@@ -156,6 +163,7 @@
 		A85021981FC5887500156030 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				B7E2652D1FF34CC500C09EFA /* CustomImageCollectionViewCell */,
 				B72AAB091FE8F3B200C725F5 /* ChatroomCell */,
 				A8C50F291FC6C45200F3E9EB /* FirstProfileCell */,
 				A88B68651FC6AD320020B7F9 /* FirstCommentCell */,
@@ -182,8 +190,6 @@
 				B7CE16591FBD82EF0096DD38 /* TimelineTableViewController.swift */,
 				B76B527E1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift */,
 				B75CE9311FC3C899005176A0 /* PostViewController.swift */,
-				A8C50F2E1FC6D59C00F3E9EB /* ProfileTableViewController.swift */,
-				A8C50F311FC7B2DD00F3E9EB /* EditProfileTableViewController.swift */,
 			);
 			path = Timeline;
 			sourceTree = "<group>";
@@ -264,6 +270,24 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
+		B71988F41FF4829000D70124 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A8C50F311FC7B2DD00F3E9EB /* EditProfileTableViewController.swift */,
+				A8C50F2E1FC6D59C00F3E9EB /* ProfileTableViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		B71988F51FF4832D00D70124 /* Chatroom */ = {
+			isa = PBXGroup;
+			children = (
+				B740846A1FF25721003354E5 /* CreateChatroomViewController.swift */,
+				B7E265321FF34D9600C09EFA /* AvatarImageViewController.swift */,
+			);
+			path = Chatroom;
+			sourceTree = "<group>";
+		};
 		B72AAB091FE8F3B200C725F5 /* ChatroomCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +334,7 @@
 				B75CE9381FC3E44D005176A0 /* StatusCellItem.swift */,
 				A8C50F3D1FC7F7FB00F3E9EB /* User.swift */,
 				B73874821FF0A80A004024A7 /* Post.swift */,
+				B7E2652B1FF341E300C09EFA /* ChatroomImageStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +377,8 @@
 		B7D9223A1FB98A4B00F52637 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B71988F51FF4832D00D70124 /* Chatroom */,
+				B71988F41FF4829000D70124 /* User */,
 				A85021A01FC58FE300156030 /* Timeline */,
 				A850219F1FC58FD300156030 /* Login */,
 			);
@@ -366,6 +393,15 @@
 				A85021981FC5887500156030 /* CustomCell */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		B7E2652D1FF34CC500C09EFA /* CustomImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B7E2652E1FF34CF900C09EFA /* AvaImageCollectionViewCell.swift */,
+				B7E2652F1FF34CF900C09EFA /* AvaImageCollectionViewCell.xib */,
+			);
+			path = CustomImageCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		B7ED5AB01FECA1D000946515 /* Define */ = {
@@ -455,6 +491,7 @@
 				A88CCFFB1FCD0A9600BC93AE /* Login.storyboard in Resources */,
 				A88CCFFD1FCD0B3A00BC93AE /* Timeline.storyboard in Resources */,
 				B72AAB0F1FE8F3EA00C725F5 /* ChatroomCell.xib in Resources */,
+				B7E265311FF34CF900C09EFA /* AvaImageCollectionViewCell.xib in Resources */,
 				A88CD0111FCD0F9A00BC93AE /* CustomCommentCell.xib in Resources */,
 				A88CD0031FCD0DDC00BC93AE /* FirstTimelineTableViewCell.xib in Resources */,
 				A88672761FCEBEAB004AE90A /* Assets.xcassets in Resources */,
@@ -536,7 +573,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F746D31FE11F0500108B6A /* View.swift in Sources */,
 				A8C50F3E1FC7F7FB00F3E9EB /* User.swift in Sources */,
 				B7ED5ABA1FECA23200946515 /* ImageCache.swift in Sources */,
 				B7ED5AB51FECA1EE00946515 /* View.swift in Sources */,
@@ -547,8 +583,10 @@
 				A8C50F3C1FC7F50000F3E9EB /* UIViewController.swift in Sources */,
 				B77347E91FDFC4950080C885 /* StartViewController.swift in Sources */,
 				A88CD0131FCD0FEC00BC93AE /* FirstProfileCell.swift in Sources */,
+				B7E265301FF34CF900C09EFA /* AvaImageCollectionViewCell.swift in Sources */,
 				A88CD00F1FCD0F7500BC93AE /* CustomCommentCell.swift in Sources */,
 				B75CE9321FC3C899005176A0 /* PostViewController.swift in Sources */,
+				B7E2652C1FF341E300C09EFA /* ChatroomImageStore.swift in Sources */,
 				B72AAB0E1FE8F3EA00C725F5 /* ChatroomCell.swift in Sources */,
 				A88CD0071FCD0E9000BC93AE /* TimeLineTableViewCell.swift in Sources */,
 				A8DA8A651FCCFC8F000F18D8 /* CustomTextField.swift in Sources */,
@@ -558,20 +596,20 @@
 				A823122E1FBA740900193D97 /* SignUpViewController.swift in Sources */,
 				A8C50F321FC7B2DD00F3E9EB /* EditProfileTableViewController.swift in Sources */,
 				A88CD00C1FCD0F3200BC93AE /* FirstCommentTableViewCell.swift in Sources */,
-				B7B71FC71FE12D7200170BBB /* InputResult.swift in Sources */,
 				B73874831FF0A80A004024A7 /* Post.swift in Sources */,
 				A88CCFF71FCD08E500BC93AE /* FirstTimelineTableViewCell.swift in Sources */,
+				B7E265331FF34D9600C09EFA /* AvatarImageViewController.swift in Sources */,
 				A8C50F341FC7C40700F3E9EB /* BaseViewController.swift in Sources */,
 				A8C50F3A1FC7F47800F3E9EB /* Extension.swift in Sources */,
 				A8DA8A641FCCFC8F000F18D8 /* CustomLabelAddPhoto.swift in Sources */,
 				B7ED5AB61FECA1EE00946515 /* AppKey.swift in Sources */,
+				B740846B1FF25721003354E5 /* CreateChatroomViewController.swift in Sources */,
 				B7D9223E1FB98B9200F52637 /* LogInViewController.swift in Sources */,
 				B76B527F1FC2B6D0004583F9 /* TimelineCommentTableViewController.swift in Sources */,
 				B73E24EE1FBC37C500F08566 /* BaseNavigationController.swift in Sources */,
 				B7D9220A1FB9893F00F52637 /* AppDelegate.swift in Sources */,
 				B73E24F01FBC380700F08566 /* BaseTabbarController.swift in Sources */,
 				B7CE165A1FBD82EF0096DD38 /* TimelineTableViewController.swift in Sources */,
-				B7428BC01FE76BC300EECF10 /* AppServices.swift in Sources */,
 				B7ED5AB41FECA1EE00946515 /* InputResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

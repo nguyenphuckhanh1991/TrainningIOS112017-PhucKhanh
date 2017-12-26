@@ -15,8 +15,8 @@ class User: NSObject, NSCoding {
     var phoneNumber: String?
     var dateOfBirth: String?
     var idUser: String?
-    init?(json:[String: Any]) {
-        self.idUser = json[AppKey.UserPostKey.id] as? String
+    init?(json: [String: Any]) {
+        self.idUser = json[AppKey.UserPostKey.userId] as? String
     }
     override init() {
         super.init()
